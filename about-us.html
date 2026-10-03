@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us — Interwood | Premium Flooring in the UAE & Europe</title>
+<meta name="description" content="The Interwood story: from a Dubai showroom to a trusted flooring destination across the UAE and Europe. Our pillars, our journey, and why customers trust us.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&display=swap');
+
+/* ============ SCOPE ============ */
+#iw-exp{
+  --ink:#12160f; --muted:#6d746f; --green:#0edc0e; --green-deep:#08a808;
+  --deep:#174d42; --deep2:#0e2f28; --cream:#f5f2e9; --walnut:#7a4a28;
+  --line:#e7e7df; --white:#fff;
+  font-family:'Kumbh Sans',Arial,sans-serif; color:var(--ink); background:#fff;
+  line-height:1.6; overflow-x:clip; position:relative;
+}
+#iw-exp,#iw-exp *{box-sizing:border-box}
+#iw-exp h1,#iw-exp h2,#iw-exp h3,#iw-exp p{margin:0}
+#iw-exp img{display:block;max-width:100%}
+#iw-exp a{color:inherit;text-decoration:none}
+#iw-exp button,#iw-exp input,#iw-exp textarea{font:inherit;color:inherit}
+#iw-exp button{cursor:pointer;border:0;background:none}
+#iw-exp .shell{width:min(1320px,calc(100% - 48px));margin-inline:auto}
+#iw-exp .eyebrow{display:flex;align-items:center;gap:9px;color:var(--deep);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+#iw-exp .eyebrow:before{content:"";width:26px;height:2px;background:var(--green)}
+#iw-exp .btn{border-radius:99px;padding:15px 24px;display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.05em;transition:.3s cubic-bezier(.2,.8,.2,1);background:var(--deep);color:#fff}
+#iw-exp .btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px #0f382f3d}
+#iw-exp .btn--ghost{background:transparent;border:1px solid #ffffff42;color:#fff}
+#iw-exp .btn--ghost:hover{background:#ffffff14}
+#iw-exp .btn--acid{background:var(--green);color:#062606}
+#iw-exp section{position:relative}
+#iw-exp [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+#iw-exp [data-reveal].is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){#iw-exp [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}}
+
+/* seam divider — the signature "floorboard" motif */
+#iw-exp .seam{position:relative;height:1px;background:var(--line);overflow:visible;margin:0 auto}
+#iw-exp .seam:before{content:"";position:absolute;left:0;top:0;height:1px;width:0;background:linear-gradient(90deg,transparent,var(--green),transparent);transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .seam.is-visible:before{width:100%}
+
+/* ============ CUSTOM CURSOR ============ */
+#iw-exp .cx{position:fixed;top:0;left:0;width:11px;height:11px;border-radius:50%;background:var(--green);pointer-events:none;z-index:999;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,opacity .2s;mix-blend-mode:difference;opacity:0}
+#iw-exp .cx.on{opacity:1}
+#iw-exp .cx.view{width:64px;height:64px;background:#fff;display:flex;align-items:center;justify-content:center}
+#iw-exp .cx.drag{width:70px;height:70px;background:#fff}
+#iw-exp .cx span{display:none;font-size:10px;font-weight:800;letter-spacing:.1em;color:#000;mix-blend-mode:normal}
+#iw-exp .cx.view span,#iw-exp .cx.drag span{display:block}
+@media(hover:none),(pointer:coarse){#iw-exp .cx{display:none}}
+
+/* ============ NAV ============ */
+#iw-exp .topbar{background:var(--deep2);color:#fff;font-size:11px;padding:9px 0}
+#iw-exp .topbar .shell{display:flex;justify-content:space-between}
+#iw-exp .topbar span{opacity:.8}
+#iw-exp .nav-space{height:112px;background:#fff}
+#iw-exp .nav-wrap{position:sticky;top:0;z-index:80;padding-top:14px}
+#iw-exp .nav{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 12px 8px 20px;border:1px solid #ffffffcc;border-radius:20px;background:linear-gradient(135deg,#ffffffe6,#f7faf6cf);backdrop-filter:blur(20px) saturate(160%);box-shadow:0 14px 34px #16362a16,inset 0 1px 0 #fff}
+#iw-exp .logo{display:flex;align-items:center;gap:10px}
+#iw-exp .logo-mark{height:72px;width:auto;display:block}
+#iw-exp .footer-logo{display:inline-flex;align-items:center;background:#fff;border-radius:14px;padding:10px 16px;margin-bottom:18px}
+#iw-exp .footer-logo img{height:46px;width:auto;display:block}
+#iw-exp .logo-word{font-weight:800;font-size:16px;letter-spacing:-.02em;color:var(--ink)}
+#iw-exp .menu{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0;font-size:12px;font-weight:700}
+#iw-exp .menu>li{position:relative}
+#iw-exp .menu>li>a{display:flex;align-items:center;gap:5px;padding:12px 12px;border-radius:12px;transition:.25s}
+#iw-exp .sub-caret{display:none}
+#iw-exp .menu>li>a:hover{background:#fff;color:var(--deep)}
+#iw-exp .mega{position:absolute;left:0;top:calc(100% + 10px);width:380px;padding:9px;margin:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#fffffff5;border:1px solid #fff;border-radius:15px;box-shadow:0 20px 44px #12271d22;backdrop-filter:blur(16px);opacity:0;visibility:hidden;transform:translateY(10px) scale(.98);transition:.25s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .has-sub:hover .mega{opacity:1;visibility:visible;transform:none}
+#iw-exp .mega a{display:flex!important;flex-direction:column;border-radius:11px;overflow:hidden;border:1px solid #eaece5}
+#iw-exp .mega img{width:100%;height:78px;object-fit:cover;transition:.4s}
+#iw-exp .mega a:hover img{transform:scale(1.07)}
+#iw-exp .mega b{display:block;padding:8px 10px 2px;font-size:11px}
+#iw-exp .mega small{display:block;padding:0 10px 9px;font-size:9px;color:#82897f}
+#iw-exp .actions{display:flex;align-items:center;gap:7px}
+#iw-exp .icon{width:38px;height:38px;border:1px solid #dfe6df;border-radius:12px;display:grid;place-items:center;background:#ffffffb0;color:var(--deep);transition:.25s}
+#iw-exp .icon:hover{background:var(--deep);color:#fff}
+#iw-exp .icon svg{width:16px;height:16px}
+#iw-exp .burger{display:none;width:38px;height:38px;border:1px solid #dfe6df;border-radius:12px;place-items:center;flex:0 0 auto;transition:.25s}
+#iw-exp .burger span{display:block;width:16px;height:1.5px;background:var(--ink);position:relative;transition:.25s}
+#iw-exp .burger span:before,#iw-exp .burger span:after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:var(--ink);transition:.25s}
+#iw-exp .burger span:before{top:-5px}#iw-exp .burger span:after{top:5px}
+#iw-exp .burger.is-active span{background:transparent}
+#iw-exp .burger.is-active span:before{top:0;transform:rotate(45deg)}
+#iw-exp .burger.is-active span:after{top:0;transform:rotate(-45deg)}
+#iw-exp .menu-scrim{position:fixed;inset:0;background:#0a0e0b66;backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .25s ease;z-index:75}
+#iw-exp .menu-scrim.is-visible{opacity:1;visibility:visible}
+@media(max-width:1100px){
+  #iw-exp .menu{display:flex;flex-direction:column;align-items:stretch;gap:2px;position:fixed;left:16px;right:16px;top:98px;background:#fff;padding:14px;border-radius:18px;box-shadow:0 24px 60px #0002;z-index:90;max-height:calc(100vh - 120px);overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-10px) scale(.98);transition:opacity .25s cubic-bezier(.2,.8,.2,1),transform .25s cubic-bezier(.2,.8,.2,1),visibility .25s}
+  #iw-exp .menu.is-open{opacity:1;visibility:visible;transform:none}
+  #iw-exp .burger{display:grid}
+  #iw-exp .menu>li>a{padding:14px 12px;font-size:14px}
+  #iw-exp .has-sub .mega{position:static;width:auto;opacity:1;visibility:visible;transform:none;display:none;box-shadow:none;border:0;background:#f7faf6;margin-top:4px;grid-template-columns:1fr 1fr}
+  #iw-exp .has-sub.is-expanded .mega{display:grid}
+  #iw-exp .has-sub>a{justify-content:space-between}
+  #iw-exp .sub-caret{display:block}
+  #iw-exp .has-sub>a .sub-caret{transition:.25s;flex:0 0 auto}
+  #iw-exp .has-sub.is-expanded>a .sub-caret{transform:rotate(180deg)}
+}
+@media(hover:none),(pointer:coarse){#iw-exp .has-sub:hover .mega{opacity:0;visibility:hidden}}
+
+/* ============ 01 OPENING ============ */
+#iw-exp .opening{padding:38px 0 0;background:#fff}
+#iw-exp .opening-grid{display:grid;grid-template-columns:.86fr 1.3fr .84fr;gap:0;min-height:640px;align-items:stretch}
+#iw-exp .op-left{display:flex;flex-direction:column;justify-content:center;padding:10px 28px 10px 0}
+#iw-exp .op-stat{font-size:11px;color:var(--muted);margin-bottom:22px;display:flex;align-items:center;gap:8px}
+#iw-exp .op-stat b{color:var(--ink)}
+#iw-exp .op-title{font-family:'Kumbh Sans',Arial,sans-serif;font-weight:800;letter-spacing:-.05em;line-height:.86;font-size:clamp(46px,6.1vw,86px);text-transform:uppercase}
+#iw-exp .op-title em{font-style:normal;color:var(--green-deep)}
+#iw-exp .op-sub{margin-top:26px;max-width:300px;color:var(--muted);font-size:14px;line-height:24px}
+#iw-exp .op-center{position:relative;border-radius:4px;overflow:hidden;background:#171b18}
+#iw-exp .op-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform,opacity;transition:transform .1s linear,opacity .45s ease}
+#iw-exp .op-layer.l1,#iw-exp .op-layer.l1b{z-index:1}
+#iw-exp .op-chip{position:absolute;left:22px;top:22px;z-index:3;background:#ffffffe6;backdrop-filter:blur(8px);border-radius:99px;padding:8px 14px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--deep);transition:.3s}
+#iw-exp .op-right{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:10px 4px 10px 28px;border-left:1px solid var(--line)}
+#iw-exp .op-pick{display:flex;align-items:center;gap:12px;padding:13px 6px;cursor:pointer;transition:.25s;border-bottom:1px solid var(--line)}
+#iw-exp .op-pick:first-child{border-top:1px solid var(--line)}
+#iw-exp .op-pick i{font-style:normal;font-size:10px;color:var(--muted);width:20px}
+#iw-exp .op-pick b{font-size:14px;font-weight:700;transition:.2s}
+#iw-exp .op-pick.is-active b,#iw-exp .op-pick:hover b{color:var(--green-deep);padding-left:4px}
+#iw-exp .op-foot{display:flex;justify-content:center;padding:22px 0 26px;font-size:10px;font-weight:800;letter-spacing:.14em;color:var(--muted);gap:8px;align-items:center}
+#iw-exp .op-foot svg{width:12px;height:12px;animation:iwBounce 1.8s ease-in-out infinite}
+@keyframes iwBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(prefers-reduced-motion:reduce){#iw-exp .op-foot svg{animation:none}}
+
+/* ============ 02 DISCOVER ============ */
+#iw-exp .discover{background:var(--ink);color:#fff;overflow:hidden}
+#iw-exp .discover-head{padding:70px 0 10px;position:relative;z-index:3}
+#iw-exp .discover-head .eyebrow{color:#bff4bd}
+#iw-exp .discover-head .eyebrow:before{background:var(--green)}
+#iw-exp .discover-head p{color:#a9b0a7;max-width:420px;margin-top:14px;font-size:14px}
+#iw-exp .discover-board{position:relative;z-index:2;padding:14px 0 0}
+#iw-exp .discover-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.4;transition:background-image 0s,opacity .5s ease;filter:saturate(1.08) brightness(.9)}
+#iw-exp .discover-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,#12160fcc 32%,transparent 72%),linear-gradient(0deg,var(--ink) 0%,transparent 22%,transparent 78%,var(--ink) 100%)}
+#iw-exp .cat-row{position:relative;z-index:2;display:flex;align-items:center;gap:22px;padding:20px 4px;border-top:1px solid #ffffff1c;cursor:pointer;transition:background .3s}
+#iw-exp .cat-row:last-child{border-bottom:1px solid #ffffff1c}
+#iw-exp .cat-idx{font-size:11px;font-weight:800;color:#7d867f;width:26px;flex:0 0 auto}
+#iw-exp .cat-row b{flex:1 1 auto;font-family:'Kumbh Sans',Arial,sans-serif;font-weight:800;font-size:clamp(34px,6.2vw,88px);letter-spacing:-.04em;line-height:1;color:#fff;text-shadow:0 4px 24px #00000055;transition:padding .35s cubic-bezier(.2,.8,.2,1),color .3s}
+#iw-exp .cat-row:hover b,#iw-exp .cat-row.is-on b{padding-left:22px;color:var(--green)}
+#iw-exp .cat-thumb{width:112px;height:78px;object-fit:cover;border-radius:8px;flex:0 0 auto;box-shadow:0 14px 30px #0006;transform:scale(.94);opacity:.85;transition:.35s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .cat-row:hover .cat-thumb,#iw-exp .cat-row.is-on .cat-thumb{transform:scale(1);opacity:1;box-shadow:0 18px 40px #0009}
+#iw-exp .cat-row small{flex:0 0 auto;width:230px;text-align:right;font-size:11px;font-weight:700;letter-spacing:.03em;color:#b7bfb9;opacity:0;transform:translateX(-8px);transition:.3s}
+#iw-exp .cat-row:hover small,#iw-exp .cat-row.is-on small{opacity:1;transform:none}
+#iw-exp .discover-preview{position:fixed;z-index:60;pointer-events:none;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#17e617,var(--green-deep));color:#062606;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 6px 6px 20px;border-radius:99px;opacity:0;transform:translate(-50%,-50%) scale(.7);transition:opacity .25s cubic-bezier(.2,.8,.2,1),transform .25s cubic-bezier(.2,.8,.2,1);white-space:nowrap;box-shadow:0 18px 40px #0edc0e4d,0 3px 10px #0004,inset 0 1px 0 #ffffff66}
+#iw-exp .discover-preview.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+#iw-exp .discover-preview .dp-arrow{width:30px;height:30px;border-radius:50%;background:#062606;color:var(--green);display:grid;place-items:center;flex:0 0 auto;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .discover-preview.on .dp-arrow{transform:rotate(45deg)}
+#iw-exp .discover-preview .dp-arrow svg{width:13px;height:13px}
+@media(hover:none),(pointer:coarse){#iw-exp .discover-preview{display:none}}
+@media(max-width:640px){#iw-exp .cat-thumb{display:none}#iw-exp .cat-row small{display:none}#iw-exp .cat-row b{padding-left:0!important}}
+
+/* ============ 03 CANVAS (asymmetric featured products) ============ */
+#iw-exp .canvas{padding:96px 0;background:#fbfbf8}
+#iw-exp .canvas-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:42px}
+#iw-exp .canvas-head h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.035em;line-height:1.05;max-width:560px}
+#iw-exp .canvas-head a{font-size:12px;font-weight:800;color:var(--deep);border-bottom:1px solid var(--deep);padding-bottom:4px;white-space:nowrap}
+#iw-exp .canvas-grid{display:grid;grid-template-columns:1.4fr .9fr;grid-template-rows:auto auto;gap:16px}
+#iw-exp .prod{position:relative;border-radius:6px;overflow:hidden;background:#eee;display:block}
+#iw-exp .prod img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .prod:hover img{transform:scale(1.05)}
+#iw-exp .prod-feat{grid-row:1/3;min-height:560px}
+#iw-exp .prod-info{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px;display:flex;justify-content:space-between;align-items:end;color:#fff;background:linear-gradient(0deg,#0a0e0bd6,transparent 60%);transform:translateY(14px);opacity:.92;transition:.35s}
+#iw-exp .prod:hover .prod-info{transform:none;opacity:1}
+#iw-exp .prod-info h3{font-size:19px;margin-bottom:5px}
+#iw-exp .prod-info span{font-size:11px;opacity:.85}
+#iw-exp .prod-price{font-size:14px;font-weight:800;background:#fff;color:var(--ink);padding:8px 12px;border-radius:99px;flex:0 0 auto}
+#iw-exp .prod-badge{position:absolute;top:14px;left:14px;z-index:2;background:var(--green);color:#062606;font-size:9px;font-weight:800;letter-spacing:.08em;padding:6px 10px;border-radius:99px}
+#iw-exp .prod-side{min-height:270px}
+@media(max-width:900px){#iw-exp .canvas-grid{grid-template-columns:1fr}#iw-exp .prod-feat{grid-row:auto;min-height:380px}}
+
+/* ============ 04 STATEMENT ============ */
+#iw-exp .statement{padding:120px 0;position:relative;background:var(--cream);overflow:hidden}
+#iw-exp .statement-inner{max-width:900px}
+#iw-exp .statement h2{font-family:'Fraunces',serif;font-weight:500;font-style:italic;font-size:clamp(30px,4.4vw,54px);line-height:1.22;letter-spacing:-.01em;color:var(--ink)}
+#iw-exp .statement-float{position:absolute;right:min(9vw,110px);bottom:64px;width:220px;border-radius:8px;overflow:hidden;box-shadow:0 26px 60px #0002}
+#iw-exp .statement-float img{width:100%;height:150px;object-fit:cover}
+#iw-exp .statement-float div{background:#fff;padding:14px 16px}
+#iw-exp .statement-float b{display:block;font-size:22px;color:var(--deep)}
+#iw-exp .statement-float small{font-size:10px;color:var(--muted)}
+@media(max-width:900px){#iw-exp .statement-float{display:none}}
+
+/* ============ 05 RAIL ============ */
+#iw-exp .rail-wrap{padding:90px 0 100px;background:#fff}
+#iw-exp .rail-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px;gap:20px}
+#iw-exp .rail-head h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.03em}
+#iw-exp .rail-hint{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:7px}
+#iw-exp .rail-hint svg{width:16px;height:16px}
+#iw-exp .rail-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;cursor:grab;padding-bottom:6px;scrollbar-width:none}
+#iw-exp .rail-track::-webkit-scrollbar{display:none}
+#iw-exp .rail-track.dragging{cursor:grabbing;scroll-snap-type:none}
+#iw-exp .rail-track.dragging .plank{pointer-events:none}
+#iw-exp .plank{flex:0 0 auto;width:min(72vw,420px);scroll-snap-align:start;border-radius:6px;overflow:hidden;position:relative;background:#eee;aspect-ratio:16/10}
+#iw-exp .plank img{width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none}
+#iw-exp .plank-info{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;display:flex;justify-content:space-between;align-items:end;color:#fff;background:linear-gradient(0deg,#0a0e0bd0,transparent 65%)}
+#iw-exp .plank-info h3{font-size:16px}
+#iw-exp .plank-info b{font-size:13px;background:#fff;color:var(--ink);padding:7px 11px;border-radius:99px}
+
+/* ============ 06 POSTER ============ */
+#iw-exp .poster{padding:0 0 100px;background:#fff}
+#iw-exp .poster-shell{position:relative;min-height:560px;border-radius:22px;overflow:hidden;background:var(--deep2);display:grid;grid-template-columns:1fr 1fr}
+#iw-exp .poster-copy{padding:70px 40px 60px 58px;color:#fff;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
+#iw-exp .poster-copy .eyebrow{color:#bdf0b9}#iw-exp .poster-copy .eyebrow:before{background:var(--green)}
+#iw-exp .poster-copy h2{font-size:clamp(34px,4.4vw,54px);line-height:1.04;letter-spacing:-.03em;margin:16px 0 18px}
+#iw-exp .poster-copy p{color:#cfe0da;max-width:420px;margin-bottom:24px;font-size:14px}
+#iw-exp .poster-points{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:28px}
+#iw-exp .poster-points span{font-size:11px;font-weight:700;display:flex;align-items:center;gap:7px}
+#iw-exp .poster-points i{font-style:normal;width:19px;height:19px;border-radius:50%;background:var(--green);color:#0a2b0a;display:grid;place-items:center;font-size:10px}
+#iw-exp .poster-actions{display:flex;gap:10px;flex-wrap:wrap}
+#iw-exp .poster-media{position:relative}
+#iw-exp .poster-media img{width:100%;height:100%;object-fit:cover}
+#iw-exp .poster-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--deep2),transparent 26%)}
+@media(max-width:900px){#iw-exp .poster-shell{grid-template-columns:1fr}#iw-exp .poster-media{min-height:280px}#iw-exp .poster-copy{padding:48px 26px}}
+
+/* ============ 07 SPOTLIGHT ============ */
+#iw-exp .spotlight-pin{height:260vh;position:relative}
+#iw-exp .spotlight-inner{position:sticky;top:0;height:100vh;display:flex;align-items:center;overflow:hidden;background:#fbfbf8}
+#iw-exp .spotlight-img{position:absolute;inset:0;margin:auto;z-index:2;border-radius:8px;overflow:hidden;transition:width .05s linear,height .05s linear,border-radius .3s ease;box-shadow:0 40px 90px #0002}
+#iw-exp .spotlight-img img{width:100%;height:100%;object-fit:cover}
+#iw-exp .spotlight-copy{position:absolute;z-index:1;left:min(7vw,80px);top:50%;transform:translateY(-50%);max-width:320px;opacity:1;transition:opacity .25s linear}
+#iw-exp .spotlight-copy .eyebrow{margin-bottom:14px}
+#iw-exp .spotlight-copy h2{font-size:clamp(26px,3.2vw,36px);letter-spacing:-.03em;margin-bottom:12px}
+#iw-exp .spotlight-copy p{font-size:13px;color:var(--muted);margin-bottom:18px}
+#iw-exp .spotlight-price{font-size:20px;font-weight:800;color:var(--deep)}
+@media(max-width:900px){#iw-exp .spotlight-pin{height:auto}#iw-exp .spotlight-inner{position:relative;height:auto;padding:70px 0;flex-direction:column;gap:26px}#iw-exp .spotlight-img{width:86vw!important;height:56vw!important}#iw-exp .spotlight-copy{position:static;transform:none;opacity:1;max-width:none;padding:0 24px}}
+
+/* ============ 08 PROOF ============ */
+#iw-exp .proof{padding:100px 0;background:var(--cream)}
+#iw-exp .proof-grid{display:grid;grid-template-columns:.55fr 1fr;gap:16px;align-items:center}
+#iw-exp .quote-mark{font-family:'Fraunces',serif;font-size:110px;color:#c8dfc5;line-height:.5}
+#iw-exp .quote-text{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(20px,2.6vw,30px);line-height:1.4;max-width:640px;margin:26px 0 26px}
+#iw-exp .quote-by{display:flex;gap:12px;align-items:center}
+#iw-exp .quote-by img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+#iw-exp .quote-by b{display:block;font-size:12px}
+#iw-exp .quote-by small{color:var(--muted);font-size:11px}
+@media(max-width:900px){#iw-exp .proof-grid{grid-template-columns:1fr}}
+
+/* ============ 09 FAQ ============ */
+#iw-exp .faq{padding:96px 0}
+#iw-exp .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+#iw-exp .faq-grid h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.03em;margin:12px 0 14px}
+#iw-exp .faq-grid p{color:var(--muted);font-size:14px;max-width:320px}
+#iw-exp .faq-item{border-bottom:1px solid var(--line)}
+#iw-exp .faq-q{width:100%;display:flex;justify-content:space-between;text-align:left;padding:20px 0;font-weight:800;font-size:13px}
+#iw-exp .faq-q span{transition:.3s}
+#iw-exp .faq-a{max-height:0;overflow:hidden;color:var(--muted);font-size:12px;transition:max-height .4s ease}
+#iw-exp .faq-item.is-open .faq-a{max-height:150px;padding-bottom:19px}
+#iw-exp .faq-item.is-open .faq-q span{transform:rotate(45deg)}
+@media(max-width:900px){#iw-exp .faq-grid{grid-template-columns:1fr;gap:24px}}
+
+/* ============ 10 FINAL CTA ============ */
+#iw-exp .final{background:#101713;color:#fff;padding:100px 0 0}
+#iw-exp .final-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+#iw-exp .final h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.03em;margin:14px 0}
+#iw-exp .final p{color:#a9b2ac;max-width:340px;font-size:14px}
+#iw-exp .final-list{display:grid;gap:12px;margin-top:24px;font-size:13px;color:#cfd6d0}
+#iw-exp .final-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#iw-exp .final-form input,#iw-exp .final-form select,#iw-exp .final-form textarea{border:1px solid #ffffff26;background:#ffffff0c;color:#fff;border-radius:10px;padding:14px;outline:0;width:100%}
+#iw-exp .final-form textarea{grid-column:1/3;min-height:100px;resize:vertical}
+#iw-exp .final-form button{grid-column:1/3}
+@media(max-width:900px){#iw-exp .final-grid{grid-template-columns:1fr}#iw-exp .final-form{grid-template-columns:1fr}#iw-exp .final-form textarea,#iw-exp .final-form button{grid-column:auto}}
+
+/* ============ FOOTER ============ */
+#iw-exp .footer{padding:80px 0 0;overflow:hidden}
+#iw-exp .footer-cols{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:40px;padding-bottom:50px;border-bottom:1px solid #ffffff17}
+#iw-exp .footer-cols p{font-size:11px;color:#9aa39d;max-width:260px}
+#iw-exp .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#fff;margin-bottom:16px}
+#iw-exp .footer a{display:block;font-size:11px;color:#9aa39d;margin:9px 0}
+#iw-exp .newsletter{display:flex;background:#ffffff0f;border:1px solid #ffffff22;border-radius:99px;padding:5px;margin-top:16px;max-width:280px}
+#iw-exp .newsletter input{flex:1;background:transparent;border:0;outline:0;padding:0 14px;color:#fff;font-size:12px}
+#iw-exp .newsletter button{background:var(--green);color:#062606;font-weight:800;font-size:11px;border-radius:99px;padding:11px 16px}
+#iw-exp .wordmark{font-weight:800;letter-spacing:-.05em;font-size:clamp(60px,14vw,220px);line-height:.8;text-align:center;padding:40px 0 14px;color:#1b231e;user-select:none}
+#iw-exp .copy{display:flex;justify-content:space-between;padding:0 0 22px;font-size:10px;color:#7d857f}
+@media(max-width:900px){#iw-exp .footer-cols{grid-template-columns:1fr 1fr}#iw-exp .footer-cols>div:first-child{grid-column:1/3}}
+@media(max-width:640px){#iw-exp .copy{flex-direction:column;gap:6px}}
+
+/* ============ RESPONSIVE — NAV / OPENING / DISCOVER ============ */
+@media(max-width:1080px){#iw-exp .opening-grid{grid-template-columns:1fr;min-height:0}#iw-exp .op-left{padding:0 0 26px}#iw-exp .op-center{height:52vh;min-height:340px}#iw-exp .op-right{border-left:0;border-top:1px solid var(--line);padding:20px 0 0;margin-top:26px}}
+@media(max-width:900px){#iw-exp .cat-row{gap:14px}#iw-exp .cat-thumb{width:76px;height:56px}#iw-exp .cat-row b{font-size:clamp(28px,7vw,56px);padding-left:0}#iw-exp .cat-row:hover b,#iw-exp .cat-row.is-on b{padding-left:12px}}
+@media(max-width:640px){#iw-exp .shell{width:min(100% - 28px,1320px)}#iw-exp .topbar{display:none}#iw-exp .nav-space{height:96px}#iw-exp .nav{border-radius:16px;padding:6px 8px 6px 14px;min-height:68px}#iw-exp .logo-mark{height:auto;max-height:56px;width:auto}#iw-exp .menu{top:82px}#iw-exp .actions .icon:nth-child(2),#iw-exp .actions .icon:nth-child(3){display:none}#iw-exp .canvas-head,#iw-exp .rail-head{flex-direction:column;align-items:flex-start;gap:10px}#iw-exp .cat-thumb{display:none}#iw-exp .cat-row small{display:none}#iw-exp .cat-row b{font-size:13vw;padding-left:0!important}#iw-exp .statement{padding:80px 0}#iw-exp .final-grid{gap:40px}}
+@media(max-width:420px){#iw-exp .op-title{font-size:clamp(38px,12vw,56px)}#iw-exp .op-sub{max-width:none}#iw-exp .poster-points{gap:10px}#iw-exp .quote-mark{font-size:70px}}
+
+
+
+/* 09–11 ADDITIONAL ABOUT SECTIONS — same established design language */
+#iw-exp .abt-specialties{padding:108px 0;background:var(--deep2);color:#fff;overflow:hidden}
+#iw-exp .abt-specialties-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:42px}
+#iw-exp .abt-specialties-head h2{font-size:clamp(31px,4vw,48px);line-height:1.04;letter-spacing:-.04em;max-width:620px;margin-top:12px}
+#iw-exp .abt-specialties-head p{color:#b8c7bf;font-size:13px;line-height:22px;max-width:350px}
+#iw-exp .abt-specialty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+#iw-exp .abt-specialty-card{position:relative;min-height:265px;border:1px solid #31554d;border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:transform .35s,background .35s}
+#iw-exp .abt-specialty-card:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-65px;bottom:-70px;background:#174d42;transition:transform .45s}
+#iw-exp .abt-specialty-card:hover{transform:translateY(-6px);background:#123e36}
+#iw-exp .abt-specialty-card:hover:after{transform:scale(1.18)}
+#iw-exp .abt-specialty-card>*{position:relative;z-index:1}
+#iw-exp .abt-specialty-no{font-family:'Fraunces',serif;font-style:italic;color:#9db7ae;font-size:18px}
+#iw-exp .abt-specialty-card h3{font-size:22px;letter-spacing:-.025em;margin:18px 0 9px}
+#iw-exp .abt-specialty-card p{font-size:11.5px;line-height:20px;color:#b8c7bf;max-width:290px}
+#iw-exp .abt-specialty-link{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#bff4bd;margin-top:25px}
+@media(max-width:800px){
+  #iw-exp .abt-specialties{padding:78px 0}
+  #iw-exp .abt-specialties-head{display:block;margin-bottom:30px}
+  #iw-exp .abt-specialties-head p{margin-top:17px}
+  #iw-exp .abt-specialty-grid{grid-template-columns:1fr}
+}
+
+#iw-exp .abt-projects{padding:110px 0;background:var(--cream);overflow:hidden}
+#iw-exp .abt-projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#iw-exp .abt-project-feature{position:relative;min-height:475px;border-radius:15px;overflow:hidden;background:var(--deep2)}
+#iw-exp .abt-project-feature img{width:100%;height:100%;min-height:475px;object-fit:cover;transition:transform .8s}
+#iw-exp .abt-project-feature:hover img{transform:scale(1.035)}
+#iw-exp .abt-project-feature:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,#07100cd9 100%)}
+#iw-exp .abt-project-overlay{position:absolute;z-index:2;left:30px;right:30px;bottom:28px;color:#fff}
+#iw-exp .abt-project-overlay .eyebrow{color:#bff4bd}
+#iw-exp .abt-project-overlay h3{font-size:30px;letter-spacing:-.035em;line-height:1.05;margin-top:10px}
+#iw-exp .abt-project-side{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+#iw-exp .abt-project-note{background:#fff;border:1px solid #dfddd2;border-radius:15px;padding:30px;display:flex;flex-direction:column;justify-content:center}
+#iw-exp .abt-project-note:nth-child(2){background:#e9eee6}
+#iw-exp .abt-project-note .num{font-family:'Fraunces',serif;font-style:italic;color:#b0c1b8;font-size:27px}
+#iw-exp .abt-project-note h3{font-size:23px;letter-spacing:-.03em;margin:10px 0 9px}
+#iw-exp .abt-project-note p{font-size:12px;line-height:20px;color:var(--muted);max-width:390px}
+@media(max-width:800px){
+  #iw-exp .abt-projects{padding:78px 0}
+  #iw-exp .abt-projects-grid{grid-template-columns:1fr}
+  #iw-exp .abt-project-feature{min-height:390px}
+  #iw-exp .abt-project-feature img{min-height:390px}
+  #iw-exp .abt-project-side{grid-template-rows:auto}
+}
+
+#iw-exp .abt-promise{padding:105px 0;background:#fff}
+#iw-exp .abt-promise-inner{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:62px 0;display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}
+#iw-exp .abt-promise-head h2{font-size:clamp(31px,4vw,49px);line-height:1.04;letter-spacing:-.04em;margin-top:13px;max-width:440px}
+#iw-exp .abt-promise-head h2 em{font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:var(--green-deep)}
+#iw-exp .abt-promise-head p{font-size:13px;line-height:22px;color:var(--muted);max-width:380px;margin-top:17px}
+#iw-exp .abt-promise-list{display:grid;grid-template-columns:1fr 1fr;gap:0 35px}
+#iw-exp .abt-promise-item{padding:22px 0;border-top:1px solid var(--line)}
+#iw-exp .abt-promise-item:nth-child(-n+2){border-top:0}
+#iw-exp .abt-promise-item b{display:block;font-size:13px;margin-bottom:6px}
+#iw-exp .abt-promise-item p{font-size:11px;line-height:18px;color:var(--muted)}
+#iw-exp .abt-promise-item span{font-family:'Fraunces',serif;font-style:italic;color:#b7c6bd;font-size:16px}
+@media(max-width:760px){
+  #iw-exp .abt-promise{padding:75px 0}
+  #iw-exp .abt-promise-inner{grid-template-columns:1fr;gap:38px;padding:45px 0}
+  #iw-exp .abt-promise-list{grid-template-columns:1fr}
+  #iw-exp .abt-promise-item:nth-child(2){border-top:1px solid var(--line)}
+}
+
+
+/* 11–13 PREMIUM ADDITIONS — uses existing Interwood palette only */
+#iw-exp .abt-promise-premium{padding:112px 0;background:var(--deep2);color:#fff;overflow:hidden}
+#iw-exp .abt-promise-top{display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:end;padding-bottom:46px;border-bottom:1px solid #31554d}
+#iw-exp .abt-promise-top h2{font-size:clamp(34px,4.5vw,55px);line-height:1;letter-spacing:-.045em;margin-top:13px;max-width:650px}
+#iw-exp .abt-promise-top h2 em{font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:#bff4bd}
+#iw-exp .abt-promise-top p{font-size:13px;line-height:22px;color:#b8c7bf;max-width:360px}
+#iw-exp .abt-promise-feature{display:grid;grid-template-columns:1.05fr .95fr;min-height:420px}
+#iw-exp .abt-promise-main{padding:55px 55px 48px 0;border-right:1px solid #31554d;display:flex;flex-direction:column}
+#iw-exp .abt-promise-index{font-size:9px;font-weight:800;letter-spacing:.14em;color:#9db7ae;text-transform:uppercase}
+#iw-exp .abt-promise-main h3{font-size:clamp(30px,3.8vw,47px);line-height:1.02;letter-spacing:-.04em;margin-top:45px;max-width:480px}
+#iw-exp .abt-promise-main>p{font-size:13px;line-height:23px;color:#b8c7bf;max-width:460px;margin-top:17px}
+#iw-exp .abt-promise-quote{margin-top:auto;padding-top:35px;font-family:'Fraunces',serif;font-style:italic;font-size:20px;color:#fff;max-width:440px}
+#iw-exp .abt-promise-points{display:grid;grid-template-columns:1fr 1fr;padding-left:45px;align-content:center}
+#iw-exp .abt-promise-point{padding:22px 15px 22px 0;border-top:1px solid #31554d;display:flex;gap:15px}
+#iw-exp .abt-promise-point:nth-child(-n+2){border-top:0}
+#iw-exp .abt-promise-point>span{font-family:'Fraunces',serif;font-style:italic;color:#8da99f;font-size:16px}
+#iw-exp .abt-promise-point b{font-size:12px;display:block;margin-bottom:5px}
+#iw-exp .abt-promise-point small{font-size:10.5px;line-height:17px;color:#9fb2aa;display:block}
+@media(max-width:850px){
+  #iw-exp .abt-promise-premium{padding:78px 0}
+  #iw-exp .abt-promise-top{grid-template-columns:1fr;gap:25px}
+  #iw-exp .abt-promise-feature{grid-template-columns:1fr}
+  #iw-exp .abt-promise-main{border-right:0;border-bottom:1px solid #31554d;padding:42px 0}
+  #iw-exp .abt-promise-points{padding:25px 0 0}
+}
+@media(max-width:600px){
+  #iw-exp .abt-promise-points{grid-template-columns:1fr}
+  #iw-exp .abt-promise-point:nth-child(2){border-top:1px solid #31554d}
+}
+
+#iw-exp .abt-regions{padding:112px 0;background:var(--cream);overflow:hidden}
+#iw-exp .abt-regions-head{display:grid;grid-template-columns:1fr .72fr;gap:70px;align-items:end;margin-bottom:45px}
+#iw-exp .abt-regions-head h2{font-size:clamp(34px,4.5vw,55px);line-height:1;letter-spacing:-.045em;margin-top:13px;max-width:650px}
+#iw-exp .abt-regions-head h2 em{font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:var(--green-deep)}
+#iw-exp .abt-regions-head p{font-size:13px;line-height:22px;color:var(--muted);max-width:390px}
+#iw-exp .abt-regions-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#iw-exp .abt-region-card{background:#fff;border:1px solid #dfddd2;border-radius:15px;overflow:hidden;transition:transform .35s,box-shadow .35s}
+#iw-exp .abt-region-card:hover{transform:translateY(-6px);box-shadow:0 25px 50px #0f382f14}
+#iw-exp .abt-region-image{height:280px;overflow:hidden;background:var(--deep2)}
+#iw-exp .abt-region-image img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+#iw-exp .abt-region-card:hover .abt-region-image img{transform:scale(1.04)}
+#iw-exp .abt-region-body{padding:26px 28px 30px}
+#iw-exp .abt-region-body>span{font-size:9px;font-weight:800;letter-spacing:.13em;color:var(--green-deep)}
+#iw-exp .abt-region-body h3{font-size:25px;letter-spacing:-.03em;margin:9px 0 8px}
+#iw-exp .abt-region-body p{font-size:12px;line-height:20px;color:var(--muted);max-width:450px}
+#iw-exp .abt-region-europe{background:var(--deep2);border-color:var(--deep2);color:#fff}
+#iw-exp .abt-region-europe .abt-region-body>span{color:#bff4bd}
+#iw-exp .abt-region-europe .abt-region-body p{color:#b8c7bf}
+@media(max-width:800px){
+  #iw-exp .abt-regions{padding:78px 0}
+  #iw-exp .abt-regions-head{grid-template-columns:1fr;gap:25px}
+  #iw-exp .abt-regions-grid{grid-template-columns:1fr}
+  #iw-exp .abt-region-image{height:240px}
+}
+
+#iw-exp .abt-closing{position:relative;min-height:620px;background:var(--deep2);overflow:hidden;display:flex;align-items:flex-end}
+#iw-exp .abt-closing-image{position:absolute;inset:0}
+#iw-exp .abt-closing-image img{width:100%;height:100%;object-fit:cover;opacity:.72}
+#iw-exp .abt-closing-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#07100ce8 0%,#07100c99 42%,#07100c22 100%)}
+#iw-exp .abt-closing-content{position:relative;z-index:2;color:#fff;padding-top:130px;padding-bottom:78px}
+#iw-exp .abt-closing-content h2{font-size:clamp(38px,5.5vw,68px);line-height:.98;letter-spacing:-.05em;max-width:700px;margin-top:14px}
+#iw-exp .abt-closing-content h2 em{font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:#bff4bd}
+#iw-exp .abt-closing-content p{font-size:14px;line-height:24px;color:#c0cdc7;max-width:480px;margin:21px 0 28px}
+@media(max-width:700px){
+  #iw-exp .abt-closing{min-height:520px}
+  #iw-exp .abt-closing-content{padding-top:100px;padding-bottom:55px}
+}
+
+/* 07–08 REACH / EXPERIENCE — refined extension, same Interwood visual language */
+#iw-exp .abt-reach{padding:110px 0;background:var(--cream);overflow:hidden}
+#iw-exp .abt-reach-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:70px;align-items:start}
+#iw-exp .abt-reach-head{position:sticky;top:120px}
+#iw-exp .abt-reach-head h2{font-size:clamp(32px,4.2vw,52px);line-height:1.02;letter-spacing:-.04em;margin-top:14px;max-width:470px}
+#iw-exp .abt-reach-head h2 em{font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:var(--green-deep)}
+#iw-exp .abt-reach-head p{color:var(--muted);font-size:14px;line-height:25px;margin-top:20px;max-width:390px}
+#iw-exp .abt-reach-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#iw-exp .abt-reach-card{position:relative;background:#fff;border:1px solid #dfddd2;border-radius:14px;padding:30px 27px 28px;min-height:205px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+#iw-exp .abt-reach-card:after{content:"";position:absolute;right:-24px;bottom:-34px;width:110px;height:110px;border-radius:50%;background:#f0f6ed;transition:transform .4s}
+#iw-exp .abt-reach-card:hover{transform:translateY(-6px);box-shadow:0 22px 45px #0f382f16}
+#iw-exp .abt-reach-card:hover:after{transform:scale(1.25)}
+#iw-exp .abt-reach-card>*{position:relative;z-index:1}
+#iw-exp .abt-reach-card b{display:flex;align-items:center;gap:8px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green-deep);margin-bottom:16px}
+#iw-exp .abt-reach-card b:before{content:"";width:18px;height:1px;background:var(--green-deep)}
+#iw-exp .abt-reach-card h3{font-size:21px;letter-spacing:-.025em;margin-bottom:9px}
+#iw-exp .abt-reach-card p{font-size:12px;line-height:20px;color:var(--muted);max-width:290px}
+#iw-exp .abt-reach-card:nth-child(2){background:var(--deep2);border-color:var(--deep2);color:#fff;transform:translateY(28px)}
+#iw-exp .abt-reach-card:nth-child(2) b{color:#bff4bd}
+#iw-exp .abt-reach-card:nth-child(2) b:before{background:var(--green)}
+#iw-exp .abt-reach-card:nth-child(2) p{color:#b8c7bf}
+#iw-exp .abt-reach-card:nth-child(2):after{background:#174d42}
+#iw-exp .abt-reach-card:nth-child(2):hover{transform:translateY(22px)}
+@media(max-width:760px){
+  #iw-exp .abt-reach{padding:75px 0}
+  #iw-exp .abt-reach-grid{grid-template-columns:1fr;gap:34px}
+  #iw-exp .abt-reach-head{position:static}
+  #iw-exp .abt-reach-cards{grid-template-columns:1fr}
+  #iw-exp .abt-reach-card:nth-child(2){transform:none}
+  #iw-exp .abt-reach-card:nth-child(2):hover{transform:translateY(-6px)}
+}
+
+#iw-exp .abt-experience{padding:110px 0;background:#fff}
+#iw-exp .abt-experience-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:76px;align-items:center}
+#iw-exp .abt-experience-media{position:relative;min-height:500px;border-radius:16px;overflow:hidden;background:var(--deep2);box-shadow:0 30px 65px #0f382f18}
+#iw-exp .abt-experience-media:before{content:"INTERWOOD";position:absolute;z-index:2;left:24px;top:24px;color:#fff;font-size:9px;font-weight:800;letter-spacing:.16em;opacity:.8}
+#iw-exp .abt-experience-media img{width:100%;height:100%;min-height:500px;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .abt-experience-media:hover img{transform:scale(1.035)}
+#iw-exp .abt-experience-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0a0e0b55,transparent 35%,#0a0e0b22)}
+#iw-exp .abt-experience-copy{padding-right:10px}
+#iw-exp .abt-experience-copy h2{font-size:clamp(31px,4vw,48px);line-height:1.05;letter-spacing:-.04em;margin:14px 0 18px;max-width:500px}
+#iw-exp .abt-experience-copy>p{color:var(--muted);font-size:14px;line-height:25px;max-width:500px}
+#iw-exp .abt-experience-list{margin-top:30px;border-top:1px solid var(--line)}
+#iw-exp .abt-experience-item{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:flex-start;transition:padding-left .25s}
+#iw-exp .abt-experience-item:hover{padding-left:7px}
+#iw-exp .abt-experience-item span{font-family:'Fraunces',serif;font-style:italic;color:#b9c9b6;font-size:21px;line-height:1.1;flex:0 0 30px}
+#iw-exp .abt-experience-item b{font-size:13px;display:block;margin-bottom:4px}
+#iw-exp .abt-experience-item small{font-size:11px;line-height:18px;color:var(--muted)}
+@media(max-width:900px){
+  #iw-exp .abt-experience{padding:75px 0}
+  #iw-exp .abt-experience-grid{grid-template-columns:1fr;gap:38px}
+  #iw-exp .abt-experience-media{min-height:360px}
+  #iw-exp .abt-experience-media img{min-height:360px}
+}
+
+/* ============ ABOUT PAGE — fully original layout (tokens/buttons shared, no section reuse) ============ */
+
+/* 01 MASTHEAD */
+#iw-exp .abt-mast{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+#iw-exp .abt-mast-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--deep2)}
+#iw-exp .abt-mast-veil{position:absolute;inset:0;background:linear-gradient(0deg,#0a0e0b 6%,#0a0e0b7a 38%,#0a0e0b1a 66%,transparent 82%)}
+#iw-exp .abt-mast-inner{position:relative;z-index:2;padding-bottom:56px}
+#iw-exp .abt-mast-inner .eyebrow{color:#cfeecb}
+#iw-exp .abt-mast-inner .eyebrow:before{background:var(--green)}
+#iw-exp .abt-mast-title{font-family:'Fraunces',serif;font-weight:500;color:#fff;font-size:clamp(32px,5.4vw,68px);line-height:1.06;letter-spacing:-.01em;max-width:820px;margin-top:18px}
+#iw-exp .abt-mast-title em{font-style:italic;color:var(--green)}
+#iw-exp .abt-mast-bar{position:relative;z-index:2;background:#0a0e0b;border-top:1px solid #ffffff17}
+#iw-exp .abt-mast-bar-grid{display:flex;flex-wrap:wrap}
+#iw-exp .abt-mast-bar-grid span{flex:1 1 0;min-width:150px;text-align:center;color:#cfd6d0;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-left:1px solid #ffffff17;padding:18px 12px}
+#iw-exp .abt-mast-bar-grid span:first-child{border-left:0}
+@media(max-width:760px){#iw-exp .abt-mast{min-height:74vh}#iw-exp .abt-mast-bar-grid span{flex:0 0 50%;border-left:0!important;border-top:1px solid #ffffff17}#iw-exp .abt-mast-bar-grid span:nth-child(-n+2){border-top:0}}
+
+/* 02 STORY / MANIFESTO */
+#iw-exp .abt-story{padding:110px 0;background:#fff}
+#iw-exp .abt-story-grid{display:grid;grid-template-columns:1fr .82fr;gap:70px;align-items:center}
+#iw-exp .abt-story-quote{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(21px,2.6vw,30px);line-height:1.38;color:var(--ink);margin:18px 0 22px}
+#iw-exp .abt-story-sub{color:var(--muted);font-size:14px;line-height:25px;margin-bottom:26px;max-width:460px}
+#iw-exp .abt-story-media{position:relative;height:460px}
+#iw-exp .abt-story-img{position:absolute;border-radius:14px;object-fit:cover;box-shadow:0 30px 60px #0f382f22}
+#iw-exp .abt-story-img--a{width:76%;height:68%;right:0;top:0}
+#iw-exp .abt-story-img--b{width:54%;height:50%;left:0;bottom:0;border:6px solid #fff}
+@media(max-width:900px){#iw-exp .abt-story{padding:70px 0}#iw-exp .abt-story-grid{grid-template-columns:1fr;gap:50px}#iw-exp .abt-story-media{height:340px;order:-1}}
+
+/* 03 PILLARS — big numeral list, no hover board */
+#iw-exp .abt-pillars{padding:100px 0;background:var(--cream)}
+#iw-exp .abt-pillars-head h2{font-size:clamp(28px,3.6vw,42px);letter-spacing:-.03em;margin-top:12px;max-width:540px}
+#iw-exp .abt-pillars-list{margin-top:20px}
+#iw-exp .abt-pillar{display:flex;gap:32px;align-items:flex-start;padding:30px 0;border-top:1px solid #d9d6c8}
+#iw-exp .abt-pillar:last-child{border-bottom:1px solid #d9d6c8}
+#iw-exp .abt-pillar-num{font-family:'Fraunces',serif;font-style:italic;font-size:42px;color:#b9c9b6;flex:0 0 84px;transition:.3s}
+#iw-exp .abt-pillar:hover .abt-pillar-num{color:var(--green-deep)}
+#iw-exp .abt-pillar h3{font-size:18px;font-weight:800;margin-bottom:8px}
+#iw-exp .abt-pillar p{color:var(--muted);font-size:14px;line-height:24px;max-width:580px}
+@media(max-width:760px){#iw-exp .abt-pillars{padding:70px 0}#iw-exp .abt-pillar{gap:18px}#iw-exp .abt-pillar-num{font-size:30px;flex:0 0 46px}}
+
+/* 04 TIMELINE — vertical connector, own component */
+#iw-exp .abt-timeline{padding:100px 0;background:#fbfbf8;overflow:hidden}
+#iw-exp .abt-timeline-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+#iw-exp .abt-timeline-head h2{font-size:clamp(26px,3.2vw,38px);letter-spacing:-.03em;margin-top:12px;max-width:520px}
+#iw-exp .abt-tl-hint{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:7px;white-space:nowrap}
+#iw-exp .abt-tl-hint svg{width:16px;height:16px}
+#iw-exp .abt-tl2-track{display:flex;align-items:flex-start;gap:0;margin-top:58px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px 4px 22px;scrollbar-width:none;cursor:grab}
+#iw-exp .abt-tl2-track.dragging{cursor:grabbing;scroll-snap-type:none}
+#iw-exp .abt-tl2-track.dragging .abt-tl2-item{pointer-events:none}
+#iw-exp .abt-tl2-track::-webkit-scrollbar{display:none}
+#iw-exp .abt-tl2-item{flex:0 0 auto;width:216px;scroll-snap-align:start;position:relative}
+#iw-exp .abt-tl2-item.is-alt{margin-top:62px}
+#iw-exp .abt-tl2-idx{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:38px;line-height:1;color:#c7d6c3;display:block;margin-bottom:12px;transition:.3s}
+#iw-exp .abt-tl2-item:hover .abt-tl2-idx{color:var(--green-deep)}
+#iw-exp .abt-tl2-media{border-radius:12px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 20px 42px #0f382f1c;margin-bottom:16px}
+#iw-exp .abt-tl2-media img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .abt-tl2-item:hover .abt-tl2-media img{transform:scale(1.07)}
+#iw-exp .abt-tl2-copy b{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-deep)}
+#iw-exp .abt-tl2-copy h4{font-size:15px;font-weight:800;margin:7px 0 7px;letter-spacing:-.01em}
+#iw-exp .abt-tl2-copy p{font-size:12px;color:var(--muted);line-height:19px}
+#iw-exp .abt-tl2-arrow{flex:0 0 auto;width:46px;display:flex;align-items:center;justify-content:center;color:#c3cdc4;padding-top:64px}
+#iw-exp .abt-tl2-arrow svg{width:18px;height:18px}
+@media(max-width:900px){#iw-exp .abt-tl2-item{width:180px}#iw-exp .abt-tl2-item.is-alt{margin-top:0}#iw-exp .abt-tl2-arrow{width:22px}#iw-exp .abt-tl2-arrow svg{width:14px;height:14px}}
+@media(max-width:600px){#iw-exp .abt-timeline{padding:70px 0}#iw-exp .abt-tl2-arrow{display:none}}
+
+/* 05 GALLERY STRIP — native scroll-snap, no drag JS */
+#iw-exp .abt-gallery{padding:90px 0;background:var(--ink);color:#fff}
+#iw-exp .abt-gallery-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px;gap:16px}
+#iw-exp .abt-gallery-head h2{font-size:clamp(26px,3.2vw,36px);letter-spacing:-.03em;color:#fff}
+#iw-exp .abt-gallery-hint{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#9aa39d;white-space:nowrap}
+#iw-exp .abt-gallery-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px;scrollbar-width:none}
+#iw-exp .abt-gallery-track::-webkit-scrollbar{display:none}
+#iw-exp .abt-gallery-item{flex:0 0 auto;width:min(72vw,300px);scroll-snap-align:start;margin:0}
+#iw-exp .abt-gallery-item img{width:100%;height:220px;object-fit:cover;border-radius:10px;display:block}
+#iw-exp .abt-gallery-item figcaption{margin-top:10px;font-size:11px;color:#a9b2ac}
+
+/* 06 TRUST QUOTE BAND */
+#iw-exp .abt-trust{padding:100px 0;background:#fff;text-align:center}
+#iw-exp .abt-trust-inner{max-width:740px;margin:0 auto}
+#iw-exp .abt-trust-stars{color:#eca323;font-size:18px;margin-bottom:22px}
+#iw-exp .abt-trust-stars span{display:block;color:var(--muted);font-size:11px;margin-top:6px;letter-spacing:.02em}
+#iw-exp .abt-trust-quote{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(21px,2.6vw,29px);line-height:1.42;color:var(--ink)}
+#iw-exp .abt-trust-by{margin-top:20px;font-size:12px;font-weight:800;color:var(--deep);letter-spacing:.03em}
+
+/* site-wide full-width header refresh */
+#iw-exp .nav-wrap{padding-top:0;background:#ffffffed;border-bottom:1px solid #e8ece7;backdrop-filter:blur(18px) saturate(150%)}
+#iw-exp .nav-wrap>.shell{width:100%;max-width:none}
+#iw-exp .nav{min-height:108px;padding:8px clamp(22px,4vw,72px);border:0;border-radius:0;background:transparent;box-shadow:none}
+#iw-exp .logo-mark{content:url('assets/interwood-logo.png');height:88px;width:245px;object-fit:contain;animation:iwLogoArrival .8s cubic-bezier(.2,.8,.2,1) both,iwLogoFloat 5s ease-in-out 1s infinite}
+#iw-exp .logo:hover .logo-mark{filter:drop-shadow(0 8px 13px #174d4224)}
+#iw-exp .footer-logo{display:inline-flex;align-items:center;background:transparent;border-radius:0;padding:0;margin:0 0 24px}
+#iw-exp .footer-logo img{content:url('assets/interwood-logo.png');height:96px;width:280px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1);animation:iwLogoFloat 5s ease-in-out infinite}
+@keyframes iwLogoArrival{from{opacity:0;transform:translateY(-8px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes iwLogoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+#iw-exp .menu{font-size:16px;gap:4px}
+#iw-exp .menu>li>a{padding:13px 14px}
+@media(max-width:640px){#iw-exp .nav{min-height:82px;border-radius:0;padding:6px 14px}#iw-exp .logo-mark{height:68px;width:190px}}
+/* Site-wide NOC logo refresh */
+#iw-exp .logo-mark{content:url('assets/interwood-logo-noc.png')!important;height:96px!important;width:300px!important;object-fit:contain!important}
+#iw-exp .footer-logo{display:inline-flex!important;width:fit-content!important;align-items:center!important;background:#fff!important;border-radius:12px!important;padding:6px 10px!important;margin:0 0 22px!important}
+#iw-exp .footer-logo img{content:url('assets/interwood-logo-noc.png')!important;height:92px!important;width:230px!important;object-fit:contain!important;object-position:center!important;filter:none!important}
+@media(max-width:640px){#iw-exp .logo-mark{height:72px!important;width:220px!important}#iw-exp .footer-logo img{height:82px!important;width:205px!important}}
+
+/* ============ NEW — image support for previously image-less sections ============ */
+#iw-exp .abt-pillars-grid{display:grid;grid-template-columns:1.05fr .8fr;gap:60px;align-items:start}
+#iw-exp .abt-pillars-media{position:sticky;top:130px;height:560px;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px #0f382f22}
+#iw-exp .abt-pillars-media img{width:100%;height:100%;object-fit:cover}
+#iw-exp .abt-pillars-media-tag{position:absolute;left:18px;bottom:18px;background:#ffffffe6;backdrop-filter:blur(8px);color:var(--deep);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:9px 14px;border-radius:99px}
+@media(max-width:900px){#iw-exp .abt-pillars-grid{grid-template-columns:1fr;gap:36px}#iw-exp .abt-pillars-media{position:static;height:280px;order:-1}}
+
+#iw-exp .abt-trust-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;display:inline-block;vertical-align:middle;margin-right:10px;box-shadow:0 6px 16px #0f382f22}
+#iw-exp .abt-trust-by-row{display:flex;align-items:center;justify-content:center;margin-top:22px}
+
+#iw-exp .abt-reach-card-icon{width:42px;height:42px;border-radius:11px;object-fit:cover;margin-bottom:14px;box-shadow:0 8px 18px #0f382f22}
+
+#iw-exp .abt-specialty-icon{width:44px;height:44px;border-radius:11px;object-fit:cover;margin-bottom:14px;box-shadow:0 8px 18px #00000030}
+
+/* ============ 11 PROMISE — improvised with imagery (previously text-only) ============ */
+#iw-exp .abt-promise-main{position:relative;overflow:hidden}
+#iw-exp .abt-promise-bg{position:absolute;inset:0;z-index:0}
+#iw-exp .abt-promise-bg img{width:100%;height:100%;object-fit:cover;opacity:.24}
+#iw-exp .abt-promise-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,var(--deep2) 28%,#0e2f28cc 55%,transparent 100%)}
+#iw-exp .abt-promise-main>*{position:relative;z-index:1}
+#iw-exp .abt-promise-thumbs{display:flex;gap:10px;margin-top:26px}
+#iw-exp .abt-promise-thumbs img{width:64px;height:64px;border-radius:10px;object-fit:cover;border:2px solid #ffffff30;transition:.3s}
+#iw-exp .abt-promise-thumbs img:hover{border-color:var(--green);transform:translateY(-3px)}
+@media(max-width:850px){#iw-exp .abt-promise-thumbs{margin-top:20px}}
+
+/* ============ 12 REGIONS — small refinement, adds a third connecting strip ============ */
+#iw-exp .abt-regions-strip{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+#iw-exp .abt-regions-strip img{width:100%;height:110px;object-fit:cover;border-radius:10px;filter:saturate(1.05)}
+@media(max-width:800px){#iw-exp .abt-regions-strip{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ 13 CLOSING — small trust badge polish ============ */
+#iw-exp .abt-closing-badges{display:flex;gap:22px;margin-top:8px;flex-wrap:wrap}
+#iw-exp .abt-closing-badges img{width:38px;height:38px;border-radius:9px;object-fit:cover;opacity:.9}
+
+/* Fixed WhatsApp action — self-contained so it cannot fall below the footer if an asset is unavailable. */
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:9999;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:#25d366;color:#fff;box-shadow:0 12px 28px #075e5480;transition:transform .2s ease,box-shadow .2s ease}
+.whatsapp-float:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 17px 34px #075e5499}
+.whatsapp-float svg{display:block;width:30px;height:30px;fill:currentColor}
+@media(max-width:640px){.whatsapp-float{right:16px;bottom:16px;width:54px;height:54px}.whatsapp-float svg{width:28px;height:28px}}
+</style>
+  <link rel="stylesheet" href="assets/site-header.css">
+  <script defer src="assets/site-header.js"></script>
+</head>
+<body style="margin:0">
+<div id="iw-exp">
+  <div class="cx" id="cx"><span id="cxLabel"></span></div>
+
+  <div class="topbar"><div class="shell"><span>Interwood — premium flooring across the UAE & Europe</span><span>Call +971 52 649 0022 · info@interwood.ae</span></div></div>
+
+  <div class="nav-space">
+    <div class="nav-wrap"><div class="shell nav">
+      <a class="logo" href="index.html"><img class="logo-mark" src="data:image/webp;base64,UklGRhAvAABXRUJQVlA4WAoAAAAYAAAANwQANwQAQUxQSI8VAAABHMVt2zjW/mOnXr9nREyALN9W/hDADEYwCISulqJDq+alhdgp0ljLe26Gvy8/zrZHckXbFptA9SCgFhBQB2ioAeHIpzXs8HJWa60wZYY7PNqywp8VzVXMIjogILCsWuCq60UgM0X+/89CAH8CIyJowbZdt202zslDYdgrsL4BQQAi/cm4bdtA+29+qe3ngREBh5EkRVIoyz7me7DFsFF++A//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//jWyoedSwD2bUcAhm0PCQofnqIUMmRIoZLRzVWOGERgqPGdpCGDNkQwBpjDBQI4SHDMmrhwzJIwSUxgYjNTIYrXHBQ4bUGcKQIeUDUdGjhoNX44GHDOmrSTUWzNcn1kBgeg0DzqFBwGOGthDGDNkQ8on9nVPM7yFD8urcYvz5+vnF9i5BTO8yxPIuRQy/qFg5YvdlPkoSs7sssbqHDOmryxObz9cvUTzuQsXhLlb87TFDWwhjhmwIhYuzXbz42kOG5NVViKfn61cijnY14mdXJG52VeLlRcUqEycv8zFmaAujBsJWxyzEmCHDykPbazMrqy4zs2oyO6seM7RqMUurCV7MkCBDs/YIe45F00DV7uk2re+U3NmkMfXJkH1HKnbuPBMCq2avnyNcebMDBaFqLXcOfVQnG0J9MrRLj/iJLy/XIDU54xNhHmzp+mToVx7ZmNIEWpt0oN5blnR9slmWR/SKIf2opRlotIdkR+9ls32qpeVGP2xk04GJeOFF72Wz3jGh4kQ/bmALNuhT8qGf1z6548N2bOhA3VMHReArEzpS82ZPE7pmQYfq3UoVu58Y0LFKJx1d9Af/eS9bzP06bAzqEGagCmc87TswDOrgFVDRFfE+vOI872XLuhWpQ/Kd97Kl3VOQZTvvZXEj2vOUhem81yELvBVkxXKuqWLTEbJxSoZzUQWbs94uoeM3VxXfGvKWldtcVnZyD7mL5jXXlZw6Qnb8xGkuLDdTxJ0gH4zmys4r/EaQNzZzaZFJV84dODCZazut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UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAujSU21CsD2VEnpraTFJbZjALpjpQExSW2YwC6Y6UBMUltmMAvE6bGrz7KBS/ncWyhjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZsIXDKbUiuj24K5A32uMAumOlATFJbZjALpjpQExSW2YwC6Y6UC/Tyi6XE499biZpjALpjpQExSW2YwC6Y6UBMUltmMAumOlAS75RCTidNqsZz0GW20rTCLjALpjpQExSW2YwC6Y6UBMUltmMAuo24nfrqRHoSZ1gxvu35zVXGAXTHSgJiktsxgF0x0oCYpLbMYBdMfuUBNBRltqR4HtwMpMA55GAXTHSgJiktsxgF0x0oCYpLbMYBdMdKAmKS8BleGm433L974pLbMYBdMdKAmKS2zGAXTHSgJiktsxgF4moLid74pLbMYBdMdKAmKS2zGAXTHSgJiktsxgF0x+5QExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQFLaktsxgF0x0oCYpLbMYBdMdKAmKS2zGAXTHSgJikuxZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOdmMVMSeKOZyo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" alt="Interwood Flooring"></a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-sub"><a href="index.html#collections">Wood<svg class="sub-caret" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></a>
+          <ul class="mega">
+            <li><a href="engineered-wood-products.html"><img src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=400&q=80" alt="Engineered wood"><b>Engineered Wood</b><small>Natural timber collections</small></a></li>
+            <li><a href="index.html#collections"><img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=400&q=80" alt="Herringbone"><b>Herringbone &amp; Chevron</b><small>Classic patterned floors</small></a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#collections">Laminate</a></li>
+        <li class="has-sub"><a href="index.html#collections">Vinyl<svg class="sub-caret" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></a>
+          <ul class="mega">
+            <li><a href="index.html#collections"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=400&q=80" alt="LVT"><b>Luxury Vinyl Tiles</b><small>Durable, refined surfaces</small></a></li>
+            <li><a href="index.html#collections"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80" alt="BENWOOD LVT"><b>BENWOOD LVT</b><small>Herringbone collection</small></a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="index.html#collections">SPC<svg class="sub-caret" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></a>
+          <ul class="mega">
+            <li><a href="index.html#collections"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=400&q=80" alt="SPC"><b>Rochester Parquet</b><small>Performance in pattern</small></a></li>
+            <li><a href="index.html#collections"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=400&q=80" alt="BENWOOD SPC"><b>BENWOOD</b><small>Everyday SPC flooring</small></a></li>
+          </ul>
+        </li>
+        <li><a href="about-us.html" style="color:var(--deep)">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+      <div class="actions">
+        <button class="icon" aria-label="Search" data-view><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></button>
+        <button class="icon" aria-label="Account" data-view><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"></path></svg></button>
+        <button class="icon" aria-label="Cart" data-view><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="18" cy="21" r="1"></circle><path d="M2 3h2l2.6 12.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L21 6H6"></path></svg></button>
+        <button class="burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div></div>
+  </div>
+  <div class="menu-scrim" id="menuScrim"></div>
+
+  <!-- 01 MASTHEAD -->
+  <section class="abt-mast">
+    <img class="abt-mast-bg" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=2000&amp;q=88" alt="Contemporary room with warm natural wood flooring">
+    <div class="abt-mast-veil"></div>
+    <div class="shell abt-mast-inner" data-reveal>
+      <div class="eyebrow">About Interwood</div>
+      <h1 class="abt-mast-title">The floor beneath <em>every</em> home we've touched.</h1>
+    </div>
+    <div class="abt-mast-bar">
+      <div class="shell abt-mast-bar-grid">
+        <span>Est. Dubai</span><span>15+ Years</span><span>UAE & Europe</span><span>Hundreds of Designs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 STORY -->
+  <section class="abt-story">
+    <div class="shell abt-story-grid">
+      <div data-reveal>
+        <div class="eyebrow">Our story</div>
+        <p class="abt-story-quote">"We didn't set out to be the biggest flooring company in the UAE — just the one people actually trust to get it right."</p>
+        <p class="abt-story-sub">Interwood started as a single Dubai showroom with a simple idea: honest advice, and floors that outlast the trend that sold them. Today, we operate across the UAE and Europe, bringing the same care, product knowledge and attention to detail to every project.</p>
+        <a class="btn" href="#pillars">See what we stand for →</a>
+      </div>
+      <div class="abt-story-media" data-reveal>
+        <img class="abt-story-img abt-story-img--a" src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=85" alt="Interwood interior detail">
+        <img class="abt-story-img abt-story-img--b" src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=700&q=85" alt="Interwood showroom seating">
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 PILLARS -->
+  <section class="abt-pillars" id="pillars">
+    <div class="shell abt-pillars-grid">
+      <div>
+        <div class="abt-pillars-head" data-reveal>
+          <div class="eyebrow">What we stand for</div>
+          <h2>Four things we don't compromise on.</h2>
+        </div>
+        <div class="abt-pillars-list">
+          <div class="abt-pillar" data-reveal><span class="abt-pillar-num">01</span><div><h3>Quality</h3><p>Never a shortcut on materials — every plank is chosen to outlast the trend that sold it.</p></div></div>
+          <div class="abt-pillar" data-reveal><span class="abt-pillar-num">02</span><div><h3>Value</h3><p>Premium looks at honest prices. Budget shouldn't decide whether a room feels finished.</p></div></div>
+          <div class="abt-pillar" data-reveal><span class="abt-pillar-num">03</span><div><h3>Expertise</h3><p>Advisors who know every plank in the showroom, not just the price list.</p></div></div>
+          <div class="abt-pillar" data-reveal><span class="abt-pillar-num">04</span><div><h3>Reliability</h3><p>Stocked inventory across the UAE means faster delivery and fewer surprises.</p></div></div>
+        </div>
+      </div>
+      <div class="abt-pillars-media" data-reveal>
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Close-up of premium engineered wood flooring texture">
+        <span class="abt-pillars-media-tag">Crafted with care</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 TIMELINE -->
+  <section class="abt-timeline">
+    <div class="shell">
+      <div class="abt-timeline-head" data-reveal>
+        <div>
+          <div class="eyebrow">Our journey</div>
+          <h2>Fifteen years, one floor at a time.</h2>
+        </div>
+        <span class="abt-tl-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3"></path></svg>Drag to explore</span>
+      </div>
+      <div class="abt-tl2-track" id="tlTrack">
+        <div class="abt-tl2-item" data-reveal>
+          <span class="abt-tl2-idx">01</span>
+          <div class="abt-tl2-media"><img src="https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=600&q=80" alt="Interwood's first showroom counter"></div>
+          <div class="abt-tl2-copy"><b>Est.</b><h4>The Beginning</h4><p>Interwood opens its doors with a single showroom in Dubai.</p></div>
+        </div>
+        <div class="abt-tl2-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="abt-tl2-item is-alt" data-reveal>
+          <span class="abt-tl2-idx">02</span>
+          <div class="abt-tl2-media"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80" alt="Interwood's first dedicated showroom"></div>
+          <div class="abt-tl2-copy"><b>Year 1</b><h4>First Showroom</h4><p>A dedicated space in Al Quoz, built around real samples and real advice.</p></div>
+        </div>
+        <div class="abt-tl2-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="abt-tl2-item" data-reveal>
+          <span class="abt-tl2-idx">03</span>
+          <div class="abt-tl2-media"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Expanding Interwood flooring collections"></div>
+          <div class="abt-tl2-copy"><b>Growing</b><h4>Expanding Collections</h4><p>Hundreds of designs added, sourced from internationally renowned brands.</p></div>
+        </div>
+        <div class="abt-tl2-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="abt-tl2-item is-alt" data-reveal>
+          <span class="abt-tl2-idx">04</span>
+          <div class="abt-tl2-media"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=600&q=80" alt="Multiple Interwood showrooms across the UAE"></div>
+          <div class="abt-tl2-copy"><b>UAE-Wide</b><h4>Multiple Showrooms</h4><p>Interwood grows across the UAE — without losing the personal touch.</p></div>
+        </div>
+        <div class="abt-tl2-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="abt-tl2-item" data-reveal>
+          <span class="abt-tl2-idx">05</span>
+          <div class="abt-tl2-media"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Interwood today"></div>
+          <div class="abt-tl2-copy"><b>Today</b><h4>15+ Years Strong</h4><p>Still guided by the same promise — now serving clients across the UAE and Europe.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 GALLERY -->
+  <section class="abt-gallery">
+    <div class="shell abt-gallery-head" data-reveal>
+      <h2>Inside Interwood</h2>
+      <span class="abt-gallery-hint">Scroll to explore →</span>
+    </div>
+    <div class="shell">
+      <div class="abt-gallery-track">
+        <figure class="abt-gallery-item"><img src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=700&q=80" alt="Engineered wood showroom display"><figcaption>Engineered wood, on display</figcaption></figure>
+        <figure class="abt-gallery-item"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=700&q=80" alt="Interwood showroom seating area"><figcaption>Where the conversation starts</figcaption></figure>
+        <figure class="abt-gallery-item"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Laminate flooring samples"><figcaption>Hundreds of samples, ready to compare</figcaption></figure>
+        <figure class="abt-gallery-item"><img src="https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?auto=format&fit=crop&w=700&q=80" alt="Interwood advisor with a client"><figcaption>Advice first, upselling never</figcaption></figure>
+        <figure class="abt-gallery-item"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=700&q=80" alt="Finished Interwood flooring installation"><figcaption>A floor that feels like home</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 TRUST -->
+  <section class="abt-trust">
+    <div class="shell abt-trust-inner" data-reveal>
+      <div class="abt-trust-stars">★★★★★<span>4.9 average Google rating</span></div>
+      <p class="abt-trust-quote">"No pressure, no upselling — just honest advice from people who clearly love what they do."</p>
+      <div class="abt-trust-by-row">
+        <img class="abt-trust-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Layla H., Interwood client">
+        <div class="abt-trust-by">Layla H. — Jumeirah, Dubai</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 07 REACH -->
+  <section class="abt-reach">
+    <div class="shell abt-reach-grid">
+      <div class="abt-reach-head" data-reveal>
+        <div class="eyebrow">Where we are today</div>
+        <h2>From Dubai roots to <em>a wider world.</em></h2>
+        <p>What started in Dubai has grown into a wider presence across the UAE and Europe. The geography has changed, but the standard remains the same.</p>
+      </div>
+      <div class="abt-reach-cards">
+        <div class="abt-reach-card" data-reveal>
+          <img class="abt-reach-card-icon" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=200&q=80" alt="Dubai">
+          <b>01 · UAE</b>
+          <h3>Built from Dubai</h3>
+          <p>Our home market — with flooring collections and project support shaped around modern residential and commercial spaces.</p>
+        </div>
+        <div class="abt-reach-card" data-reveal>
+          <img class="abt-reach-card-icon" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=200&q=80" alt="Europe">
+          <b>02 · Europe</b>
+          <h3>Now across Europe</h3>
+          <p>We also operate in Europe, extending the Interwood approach to clients and projects beyond our UAE roots.</p>
+        </div>
+        <div class="abt-reach-card" data-reveal>
+          <img class="abt-reach-card-icon" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=200&q=80" alt="Consistency across regions">
+          <b>03 · One standard</b>
+          <h3>The same attention</h3>
+          <p>Different locations, same principle: listen carefully, recommend honestly and deliver with care.</p>
+        </div>
+        <div class="abt-reach-card" data-reveal>
+          <img class="abt-reach-card-icon" src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=200&q=80" alt="Real project spaces">
+          <b>04 · Every project</b>
+          <h3>Made for real spaces</h3>
+          <p>From a single room to a larger development, we help make flooring choices that look right and perform beautifully.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 EXPERIENCE -->
+  <section class="abt-experience">
+    <div class="shell abt-experience-grid">
+      <div class="abt-experience-media" data-reveal>
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85" alt="Beautiful finished flooring interior">
+      </div>
+      <div class="abt-experience-copy" data-reveal>
+        <div class="eyebrow">The Interwood experience</div>
+        <h2>Good flooring starts with <em style="font-family:'Fraunces',serif;font-weight:500">good decisions.</em></h2>
+        <p>We keep the experience simple: understand the space, compare the right options, and make a choice that still feels right years after installation.</p>
+        <div class="abt-experience-list">
+          <div class="abt-experience-item"><span>01</span><div><b>Understand the space</b><small>Usage, style, light, budget and the details that shape the right choice.</small></div></div>
+          <div class="abt-experience-item"><span>02</span><div><b>Compare with confidence</b><small>Real samples and clear advice, without unnecessary pressure.</small></div></div>
+          <div class="abt-experience-item"><span>03</span><div><b>Choose for the long term</b><small>A floor should work beautifully today and continue to make sense tomorrow.</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 09 SPECIALTIES -->
+  <section class="abt-specialties">
+    <div class="shell">
+      <div class="abt-specialties-head" data-reveal>
+        <div>
+          <div class="eyebrow" style="color:#bff4bd">What we bring</div>
+          <h2>Thoughtful flooring, from first sample to final finish.</h2>
+        </div>
+        <p>Our role is more than choosing a surface. We help clients make considered decisions around the look, feel and everyday performance of a space.</p>
+      </div>
+      <div class="abt-specialty-grid">
+        <article class="abt-specialty-card" data-reveal>
+          <div><img class="abt-specialty-icon" src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=200&q=80" alt="Curated collections"><div class="abt-specialty-no">01</div><h3>Curated collections</h3><p>Engineered wood, laminate, SPC, vinyl and carpet options selected to give every project a strong starting point.</p></div>
+          <div class="abt-specialty-link">Explore the range →</div>
+        </article>
+        <article class="abt-specialty-card" data-reveal>
+          <div><img class="abt-specialty-icon" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=200&q=80" alt="Material guidance"><div class="abt-specialty-no">02</div><h3>Material guidance</h3><p>Clear, practical conversations around finish, use, atmosphere and the details that make a floor feel right.</p></div>
+          <div class="abt-specialty-link">Make an informed choice →</div>
+        </article>
+        <article class="abt-specialty-card" data-reveal>
+          <div><img class="abt-specialty-icon" src="https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?auto=format&fit=crop&w=200&q=80" alt="Project support"><div class="abt-specialty-no">03</div><h3>Project support</h3><p>From a single room to a wider project, we keep the process focused, considered and easy to navigate.</p></div>
+          <div class="abt-specialty-link">Start a conversation →</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 PROJECTS -->
+  <section class="abt-projects">
+    <div class="shell abt-projects-grid">
+      <div class="abt-project-feature" data-reveal>
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=85" alt="Contemporary interior with premium flooring">
+        <div class="abt-project-overlay">
+          <div class="eyebrow">Spaces we work with</div>
+          <h3>From calm homes to considered commercial spaces.</h3>
+        </div>
+      </div>
+      <div class="abt-project-side">
+        <div class="abt-project-note" data-reveal>
+          <div class="num">01</div>
+          <h3>Residential</h3>
+          <p>Warmth, texture and everyday practicality — flooring chosen to become part of the home rather than compete with it.</p>
+        </div>
+        <div class="abt-project-note" data-reveal>
+          <div class="num">02</div>
+          <h3>Commercial &amp; hospitality</h3>
+          <p>Spaces where visual consistency, durability and a strong first impression all matter together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 PROMISE (third-last before footer) — improvised with photography, no longer text-only -->
+  <section class="abt-promise abt-promise-premium">
+    <div class="shell">
+      <div class="abt-promise-top" data-reveal>
+        <div>
+          <div class="eyebrow">The Interwood standard</div>
+          <h2>Two regions. <em>One standard of care.</em></h2>
+        </div>
+        <p>From Dubai to Europe, the same attention goes into every recommendation, every material and every finished space.</p>
+      </div>
+      <div class="abt-promise-feature">
+        <div class="abt-promise-main" data-reveal>
+          <div class="abt-promise-bg"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Premium interior flooring detail"></div>
+          <span class="abt-promise-index">01 / 04</span>
+          <h3>We don't just sell flooring.</h3>
+          <p>We help people make a decision they can live with — aesthetically, practically and for the long term.</p>
+          <div class="abt-promise-quote">“The right floor should feel inevitable once you see it.”</div>
+          <div class="abt-promise-thumbs">
+            <img src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=200&q=80" alt="Engineered wood swatch">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=200&q=80" alt="Laminate swatch">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=200&q=80" alt="SPC swatch">
+          </div>
+        </div>
+        <div class="abt-promise-points">
+          <div class="abt-promise-point" data-reveal><span>01</span><div><b>Listen first</b><small>Every recommendation starts with the space, not the sales pitch.</small></div></div>
+          <div class="abt-promise-point" data-reveal><span>02</span><div><b>Show the difference</b><small>Materials, textures and finishes are easier to understand when you can compare them properly.</small></div></div>
+          <div class="abt-promise-point" data-reveal><span>03</span><div><b>Think long term</b><small>Beautiful today is important. Beautiful and practical years later is better.</small></div></div>
+          <div class="abt-promise-point" data-reveal><span>04</span><div><b>Finish with care</b><small>The final details matter as much as the first impression.</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 REGIONS (second-last before footer) — added a connecting image strip -->
+  <section class="abt-regions">
+    <div class="shell">
+      <div class="abt-regions-head" data-reveal>
+        <div class="eyebrow">UAE · Europe</div>
+        <h2>Rooted in Dubai. <em>Connected to Europe.</em></h2>
+        <p>Our story began in Dubai, but our outlook has always been wider. Today, Interwood brings together the character of the UAE and the refined sensibility of European interiors.</p>
+      </div>
+      <div class="abt-regions-grid">
+        <article class="abt-region-card abt-region-uae" data-reveal>
+          <div class="abt-region-image">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=85" alt="Dubai skyline">
+          </div>
+          <div class="abt-region-body">
+            <span>01 · UAE</span>
+            <h3>Our foundation</h3>
+            <p>Dubai is where Interwood began — a fast-moving, design-conscious market that shaped our eye for quality and service.</p>
+          </div>
+        </article>
+        <article class="abt-region-card abt-region-europe" data-reveal>
+          <div class="abt-region-image">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=85" alt="European city architecture">
+          </div>
+          <div class="abt-region-body">
+            <span>02 · EUROPE</span>
+            <h3>Our wider horizon</h3>
+            <p>Europe is now a visible part of our journey — bringing a broader design perspective and extending the Interwood name into new spaces.</p>
+          </div>
+        </article>
+      </div>
+      <div class="abt-regions-strip" data-reveal>
+        <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=400&q=80" alt="Herringbone flooring detail">
+        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80" alt="Vinyl flooring finish">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=400&q=80" alt="Luxury vinyl tile detail">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=400&q=80" alt="SPC flooring pattern">
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 CLOSING (last before footer) — small badge polish alongside the existing full-bleed image -->
+  <section class="abt-closing">
+    <div class="abt-closing-image" data-reveal>
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=88" alt="Premium contemporary interior">
+    </div>
+    <div class="shell abt-closing-content" data-reveal>
+      <div class="eyebrow">Beyond a floor</div>
+      <h2>Designed for the way <em>life happens.</em></h2>
+      <p>Whether the project begins in the UAE or Europe, our goal is the same: create interiors that feel considered, comfortable and unmistakably yours.</p>
+      <div class="abt-closing-badges">
+        <img src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=100&q=80" alt="Engineered wood">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=100&q=80" alt="Laminate">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=100&q=80" alt="SPC">
+      </div>
+      <a class="btn btn--dark" href="#contact">Talk to Interwood →</a>
+    </div>
+  </section>
+
+<!-- 14 FINAL CTA -->
+  <section class="final" id="contact">
+    <div class="shell final-grid">
+      <div data-reveal>
+        <div class="eyebrow" style="color:#bff4bd">Let's create something beautiful</div>
+        <h2>Start your Interwood journey.</h2>
+        <p>Tell us a little about your space. Our team will get back to you within one working day.</p>
+        <div class="final-list"><span>☎ +971 52 649 0022</span><span>✉ info@interwood.ae</span><span>⌖ Jebel Ali Free Zone, UAE</span></div>
+      </div>
+      <form class="final-form" data-reveal action="mailto:info@interwood.ae?subject=Consultation%20Request%20-%20Interwood%20Website" method="post" enctype="text/plain">
+        <input name="Name" type="text" placeholder="Your name" required><input name="Phone" type="tel" placeholder="Phone number" required>
+        <input name="Email" type="email" placeholder="Email address" required>
+        <select name="Project type" aria-label="Project type" required><option value="">Project type</option><option>Home</option><option>Office</option><option>Hospitality / Retail</option></select>
+        <textarea name="Project details" placeholder="Tell us about your space"></textarea>
+        <button class="btn btn--acid" type="submit">Request my consultation →</button>
+      </form>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <div class="footer">
+      <div class="shell footer-cols">
+        <div>
+          <div class="footer-logo"><img src="data:image/webp;base64,UklGRhAvAABXRUJQVlA4WAoAAAAYAAAANwQANwQAQUxQSI8VAAABHMVt2zjW/mOnXr9nREyALN9W/hDADEYwCISulqJDq+alhdgp0ljLe26Gvy8/zrZHckXbFptA9SCgFhBQB2ioAeHIpzXs8HJWa60wZYY7PNqywp8VzVXMIjogILCsWuCq60UgM0X+/89CAH8CIyJowbZdt202zslDYdgrsL4BQQAi/cm4bdtA+29+qe3ngREBh5EkRVIoyz7me7DFsFF++A//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//jWyoedSwD2bUcAhm0PCQofnqIUMmRIoZLRzVWOGERgqPGdpCGDNkQwBpjDBQI4SHDMmrhwzJIwSUxgYjNTIYrXHBQ4bUGcKQIeUDUdGjhoNX44GHDOmrSTUWzNcn1kBgeg0DzqFBwGOGthDGDNkQ8on9nVPM7yFD8urcYvz5+vnF9i5BTO8yxPIuRQy/qFg5YvdlPkoSs7sssbqHDOmryxObz9cvUTzuQsXhLlb87TFDWwhjhmwIhYuzXbz42kOG5NVViKfn61cijnY14mdXJG52VeLlRcUqEycv8zFmaAujBsJWxyzEmCHDykPbazMrqy4zs2oyO6seM7RqMUurCV7MkCBDs/YIe45F00DV7uk2re+U3NmkMfXJkH1HKnbuPBMCq2avnyNcebMDBaFqLXcOfVQnG0J9MrRLj/iJLy/XIDU54xNhHmzp+mToVx7ZmNIEWpt0oN5blnR9slmWR/SKIf2opRlotIdkR+9ls32qpeVGP2xk04GJeOFF72Wz3jGh4kQ/bmALNuhT8qGf1z6548N2bOhA3VMHReArEzpS82ZPE7pmQYfq3UoVu58Y0LFKJx1d9Af/eS9bzP06bAzqEGagCmc87TswDOrgFVDRFfE+vOI872XLuhWpQ/Kd97Kl3VOQZTvvZXEj2vOUhem81yELvBVkxXKuqWLTEbJxSoZzUQWbs94uoeM3VxXfGvKWldtcVnZyD7mL5jXXlZw6Qnb8xGkuLDdTxJ0gH4zmys4r/EaQNzZzaZFJV84dODCZazut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UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAujSU21CsD2VEnpraTFJbZjALpjpQExSW2YwC6Y6UBMUltmMAvE6bGrz7KBS/ncWyhjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZsIXDKbUiuj24K5A32uMAumOlATFJbZjALpjpQExSW2YwC6Y6UC/Tyi6XE499biZpjALpjpQExSW2YwC6Y6UBMUltmMAumOlAS75RCTidNqsZz0GW20rTCLjALpjpQExSW2YwC6Y6UBMUltmMAuo24nfrqRHoSZ1gxvu35zVXGAXTHSgJiktsxgF0x0oCYpLbMYBdMfuUBNBRltqR4HtwMpMA55GAXTHSgJiktsxgF0x0oCYpLbMYBdMdKAmKS8BleGm433L974pLbMYBdMdKAmKS2zGAXTHSgJiktsxgF4moLid74pLbMYBdMdKAmKS2zGAXTHSgJiktsxgF0x+5QExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQFLaktsxgF0x0oCYpLbMYBdMdKAmKS2zGAXTHSgJikuxZjALpjpQExSW2YwC6Y6UBMUltmMAumOlATFJbZjALpjpQExSW2YwC6Y6UBMUltmMAumOdmMVMSeKOZyoTcYLBYLBYLBYLBeEtdPI8SQxJ4oikgW4BI/7un5ihdt9uHddOCHgMGPaGAQfkG78v5lq0i4rTk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" alt="Interwood Flooring"></div>
+          <p>Beautiful, high-performance floors — selected, supplied and installed across the UAE and Europe.</p>
+          <form class="newsletter" action="mailto:info@interwood.ae?subject=Newsletter%20Subscription" method="post" enctype="text/plain"><input name="Subscriber email" type="email" placeholder="Your email" required><button type="submit">Join →</button></form>
+        </div>
+        <div><h3>Collections</h3><a href="index.html#collections">Engineered Wood</a><a href="index.html#collections">Laminate</a><a href="index.html#collections">SPC &amp; Vinyl</a><a href="index.html#collections">Carpet Tiles</a></div>
+        <div><h3>Company</h3><a href="about-us.html">About us</a><a href="index.html#services">Services</a><a href="index.html#products">Products</a><a href="contact-us.html">Contact</a></div>
+        <div><h3>Visit</h3><a href="contact-us.html">Book consultation</a><a href="contact-us.html">Request samples</a><a href="#">Instagram ↗</a></div>
+      </div>
+      <div class="wordmark">INTERWOOD</div>
+      <div class="shell copy">© 2026 Interwood Flooring. All rights reserved.<span>Privacy · Terms · Made for beautiful living</span></div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('iw-exp'); if(!root) return;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* burger / mobile menu */
+  var burger=root.querySelector('.burger'), menu=root.querySelector('.menu'), scrim=root.querySelector('#menuScrim');
+  function closeMenu(){
+    if(!menu) return;
+    menu.classList.remove('is-open');
+    if(burger) burger.classList.remove('is-active');
+    if(burger) burger.setAttribute('aria-expanded','false');
+    if(scrim) scrim.classList.remove('is-visible');
+    root.querySelectorAll('.has-sub.is-expanded').forEach(function(li){li.classList.remove('is-expanded')});
+  }
+  function openMenu(){
+    if(!menu) return;
+    menu.classList.add('is-open');
+    if(burger) burger.classList.add('is-active');
+    if(burger) burger.setAttribute('aria-expanded','true');
+    if(scrim) scrim.classList.add('is-visible');
+  }
+  if(burger && menu){
+    burger.addEventListener('click',function(){
+      if(menu.classList.contains('is-open')) closeMenu(); else openMenu();
+    });
+    if(scrim) scrim.addEventListener('click', closeMenu);
+    /* tap to expand submenus on touch/narrow screens; plain links still navigate normally */
+    root.querySelectorAll('.has-sub > a').forEach(function(a){
+      a.setAttribute('aria-expanded','false');
+      a.addEventListener('click',function(e){
+        if(window.matchMedia('(max-width:1100px)').matches){
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          var li=a.parentElement, wasOpen=li.classList.contains('is-expanded');
+          root.querySelectorAll('.has-sub.is-expanded').forEach(function(x){x.classList.remove('is-expanded'); x.querySelector(':scope > a').setAttribute('aria-expanded','false');});
+          if(!wasOpen){ li.classList.add('is-expanded'); a.setAttribute('aria-expanded','true'); }
+        }
+      });
+    });
+    /* close the mobile menu after choosing a normal link */
+    menu.querySelectorAll('a:not(.has-sub > a)').forEach(function(a){
+      a.addEventListener('click', closeMenu);
+    });
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 1100) closeMenu();
+    });
+  }
+
+  /* smooth in-page anchors */
+  root.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var hash=a.getAttribute('href'); if(!hash||hash==='#')return;
+      var t=root.querySelector(hash);
+      if(t){e.preventDefault(); t.scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block:'start'});}
+    });
+  });
+
+  /* reveal on scroll */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    },{threshold:.12});
+    root.querySelectorAll('[data-reveal], .seam').forEach(function(x){io.observe(x)});
+  } else {
+    root.querySelectorAll('[data-reveal], .seam').forEach(function(x){x.classList.add('is-visible')});
+  }
+
+  /* custom cursor */
+  var cx=root.querySelector('#cx'), cxLabel=root.querySelector('#cxLabel');
+  if(fine && !reduced){
+    window.addEventListener('mousemove',function(e){
+      cx.style.left=e.clientX+'px'; cx.style.top=e.clientY+'px'; cx.classList.add('on');
+    });
+    root.querySelectorAll('a,button,[data-view]').forEach(function(el){
+      if(el.closest('.nav-wrap')) return; // keep the normal pointer over the header/menu
+      el.addEventListener('mouseenter',function(){cx.classList.add('view'); cxLabel.textContent='VIEW';});
+      el.addEventListener('mouseleave',function(){cx.classList.remove('view');});
+    });
+    var track=root.querySelector('#railTrack');
+    if(track){
+      track.addEventListener('mouseenter',function(){cx.classList.add('drag'); cxLabel.textContent='DRAG';});
+      track.addEventListener('mouseleave',function(){cx.classList.remove('drag');});
+    }
+  }
+
+  /* opening — cursor parallax + collection picker */
+  var opCenter=root.querySelector('#opCenter'), opChip=root.querySelector('#opChip');
+  if(fine && !reduced && opCenter){
+    opCenter.addEventListener('mousemove',function(e){
+      var r=opCenter.getBoundingClientRect();
+      var px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+      opCenter.querySelectorAll('.op-layer').forEach(function(l){
+        var d=parseFloat(l.dataset.depth)||10;
+        l.style.transform='translate('+(px*d)+'px,'+(py*d)+'px)';
+      });
+    });
+    opCenter.addEventListener('mouseleave',function(){
+      opCenter.querySelectorAll('.op-layer').forEach(function(l){l.style.transform='translate(0,0)'});
+    });
+  }
+  var opL1a=root.querySelector('#opLayer1a'), opL1b=root.querySelector('#opLayer1b');
+  var frontIsA=true, currentFull=opL1a?opL1a.src:'';
+  function activatePick(p){
+    root.querySelectorAll('.op-pick').forEach(function(x){x.classList.remove('is-active')});
+    p.classList.add('is-active');
+    if(opChip) opChip.textContent=p.dataset.label;
+
+    var full=p.dataset.full;
+    if(full && full!==currentFull && opL1a && opL1b){
+      currentFull=full;
+      var back=frontIsA?opL1b:opL1a, front=frontIsA?opL1a:opL1b;
+      back.src=full;
+      back.style.opacity='1';
+      front.style.opacity='0';
+      frontIsA=!frontIsA;
+    }
+  }
+  root.querySelectorAll('.op-pick').forEach(function(p){
+    p.addEventListener('mouseenter',function(){ activatePick(p); });
+    p.addEventListener('click',function(){ activatePick(p); }); /* tap support for touch devices */
+  });
+
+  /* discover board — bg swap + cursor-following preview (first row active by default) */
+  var bg=root.querySelector('#discoverBg'), rows=root.querySelectorAll('.cat-row'), preview=root.querySelector('#discoverPreview');
+  function activateRow(row){
+    rows.forEach(function(r){r.classList.remove('is-on')}); row.classList.add('is-on');
+    bg.style.backgroundImage="url('"+row.dataset.bg+"')";
+    if(preview){ preview.querySelector('span').textContent=row.dataset.label; preview.classList.add('on'); }
+  }
+  rows.forEach(function(row){
+    row.addEventListener('mouseenter',function(){ activateRow(row); });
+    row.addEventListener('mouseleave',function(){ if(preview) preview.classList.remove('on'); });
+    row.addEventListener('click',function(){ activateRow(row); }); /* tap support for touch devices */
+  });
+  if(fine && preview){
+    document.addEventListener('mousemove',function(e){
+      preview.style.left=e.clientX+'px'; preview.style.top=(e.clientY-40)+'px';
+    });
+  }
+
+  /* rail — pointer drag for mouse users (touch scrolls natively) */
+  var rTrack=root.querySelector('#railTrack');
+  if(rTrack){
+    var isDown=false, startX=0, startScroll=0;
+    rTrack.addEventListener('pointerdown',function(e){
+      if(e.pointerType==='touch') return;
+      isDown=true; rTrack.classList.add('dragging');
+      startX=e.pageX; startScroll=rTrack.scrollLeft;
+      rTrack.setPointerCapture(e.pointerId);
+    });
+    rTrack.addEventListener('pointermove',function(e){
+      if(!isDown) return;
+      rTrack.scrollLeft = startScroll - (e.pageX - startX);
+    });
+    ['pointerup','pointerleave','pointercancel'].forEach(function(ev){
+      rTrack.addEventListener(ev,function(){ isDown=false; rTrack.classList.remove('dragging'); });
+    });
+  }
+
+  /* spotlight — scroll-driven expand */
+  var pin=root.querySelector('#spotlightPin'), simg=root.querySelector('#spotlightImg'), scopy=root.querySelector('#spotlightCopy');
+  function updateSpotlight(){
+    if(!pin) return;
+    var r=pin.getBoundingClientRect();
+    var total=r.height - window.innerHeight;
+    var p = total>0 ? Math.min(1,Math.max(0,-r.top/total)) : 0;
+    var minW=38, maxW=100; // vw
+    var minH=42, maxH=100; // vh
+    var w = minW + (maxW-minW)*p, h = minH + (maxH-minH)*p;
+    simg.style.width = w+'vw'; simg.style.height = h+'vh';
+    simg.style.borderRadius = p>.92 ? '0px' : '8px';
+    if(scopy){
+      var fadeP = Math.min(1, p/.22); // fades out over the first 22% of the growth
+      scopy.style.opacity = String(1 - fadeP);
+    }
+  }
+  window.addEventListener('scroll', function(){ requestAnimationFrame(updateSpotlight); }, {passive:true});
+  updateSpotlight();
+
+  /* timeline filmstrip — pointer drag for mouse users (touch scrolls natively) */
+  var tlTrack=root.querySelector('#tlTrack');
+  if(tlTrack){
+    var tlDown=false, tlStartX=0, tlStartScroll=0;
+    tlTrack.addEventListener('pointerdown',function(e){
+      if(e.pointerType==='touch') return;
+      tlDown=true; tlTrack.classList.add('dragging');
+      tlStartX=e.pageX; tlStartScroll=tlTrack.scrollLeft;
+      tlTrack.setPointerCapture(e.pointerId);
+    });
+    tlTrack.addEventListener('pointermove',function(e){
+      if(!tlDown) return;
+      tlTrack.scrollLeft = tlStartScroll - (e.pageX - tlStartX);
+    });
+    ['pointerup','pointerleave','pointercancel'].forEach(function(ev){
+      tlTrack.addEventListener(ev,function(){ tlDown=false; tlTrack.classList.remove('dragging'); });
+    });
+  }
+
+  /* faq accordion */
+  root.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.parentElement;
+      root.querySelectorAll('.faq-item').forEach(function(x){ if(x!==item) x.classList.remove('is-open'); });
+      item.classList.toggle('is-open');
+    });
+  });
+
+})();
+</script>
+<a class="whatsapp-float" href="https://wa.me/971526490022" target="_blank" rel="noopener noreferrer" aria-label="Chat with Interwood on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12.8 12.8 0 0 0-10.94 19.47L3.6 28.4l6.1-1.6A12.8 12.8 0 1 0 16 3Zm0 23.25a10.42 10.42 0 0 1-5.3-1.45l-.38-.23-3.62.95.97-3.52-.25-.37A10.44 10.44 0 1 1 16 26.25Zm5.72-7.82c-.31-.16-1.83-.9-2.11-1-.28-.1-.49-.16-.7.16-.2.31-.8 1-.98 1.2-.18.2-.36.23-.67.08a8.52 8.52 0 0 1-2.5-1.54 9.38 9.38 0 0 1-1.73-2.15c-.18-.31 0-.48.14-.63.14-.14.31-.36.46-.54.16-.18.21-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.6-.5-.52-.7-.53h-.6c-.2 0-.53.08-.8.39-.28.31-1.05 1.03-1.05 2.52s1.08 2.92 1.23 3.12c.15.2 2.13 3.25 5.15 4.56.72.31 1.28.5 1.72.64.73.23 1.4.2 1.92.12.59-.09 1.83-.75 2.09-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.21-.59-.37Z"/></svg>
+</a>
+
+<script>
+(function(){
+  function showAboutSections(){
+    var root=document.getElementById('iw-exp');
+    if(!root) return;
+    root.querySelectorAll('[data-reveal]').forEach(function(el){
+      el.classList.add('is-visible');
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', showAboutSections);
+  }else{
+    showAboutSections();
+  }
+})();
+</script>
+
+</body>
+
+</html>

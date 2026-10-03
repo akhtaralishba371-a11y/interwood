@@ -1,0 +1,1319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interwood — Premium Flooring in the UAE</title>
+<meta name="description" content="Premium flooring supply and installation across Dubai.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&display=swap');
+
+/* ============ SCOPE ============ */
+#iw-exp{
+  --ink:#0c0f0b; --muted:#454a43; --green:#0edc0e; --green-deep:#08a808;
+  --deep:#174d42; --deep2:#0e2f28; --cream:#f5f2e9; --walnut:#7a4a28;
+  --line:#e7e7df; --white:#fff;
+  font-family:'Plus Jakarta Sans',Arial,sans-serif; color:var(--ink); background:#fff;
+  font-size:18px; line-height:1.65; overflow-x:clip; position:relative;
+}
+#iw-exp,#iw-exp *{box-sizing:border-box}
+#iw-exp h1,#iw-exp h2,#iw-exp h3,#iw-exp p{margin:0}
+#iw-exp img{display:block;max-width:100%}
+#iw-exp a{color:inherit;text-decoration:none}
+#iw-exp button,#iw-exp input,#iw-exp textarea{font:inherit;color:inherit}
+#iw-exp button{cursor:pointer;border:0;background:none}
+#iw-exp .shell{width:min(1320px,calc(100% - 48px));margin-inline:auto}
+#iw-exp .eyebrow{display:flex;align-items:center;gap:9px;color:var(--deep);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+#iw-exp .eyebrow:before{content:"";width:26px;height:2px;background:var(--green)}
+#iw-exp .btn{border-radius:99px;padding:15px 24px;display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.05em;transition:.3s cubic-bezier(.2,.8,.2,1);background:var(--deep);color:#fff}
+#iw-exp .btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px #0f382f3d}
+#iw-exp .btn--ghost{background:#ffffff17;border:1.5px solid #ffffff8f;color:#fff;backdrop-filter:blur(4px)}
+#iw-exp .btn--ghost:hover{background:#fff;color:var(--deep2);border-color:#fff}
+#iw-exp .btn--acid{background:var(--green);color:#062606}
+#iw-exp section{position:relative}
+#iw-exp [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+#iw-exp [data-reveal].is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){#iw-exp [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}}
+
+/* seam divider — the signature "floorboard" motif */
+#iw-exp .seam{position:relative;height:1px;background:var(--line);overflow:visible;margin:0 auto}
+#iw-exp .seam:before{content:"";position:absolute;left:0;top:0;height:1px;width:0;background:linear-gradient(90deg,transparent,var(--green),transparent);transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .seam.is-visible:before{width:100%}
+
+/* ============ NAV ============ */
+#iw-exp .topbar{background:var(--deep2);color:#fff;font-size:12px;padding:9px 0}
+#iw-exp .topbar .shell{display:flex;justify-content:space-between}
+#iw-exp .topbar span{opacity:.8}
+#iw-exp .nav-space{height:0;background:#fff}
+#iw-exp .nav-wrap{position:sticky;top:0;z-index:80;padding-top:14px}
+#iw-exp .nav{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 12px 8px 20px;border:1px solid #ffffffcc;border-radius:20px;background:linear-gradient(135deg,#ffffffe6,#f7faf6cf);backdrop-filter:blur(20px) saturate(160%);box-shadow:0 14px 34px #16362a16,inset 0 1px 0 #fff}
+#iw-exp .logo{display:flex;align-items:center;gap:10px}
+#iw-exp .logo-mark{height:72px;width:auto;display:block}
+#iw-exp .footer-logo{display:inline-flex;align-items:center;background:#fff;border-radius:14px;padding:10px 16px;margin-bottom:18px}
+#iw-exp .footer-logo img{height:46px;width:auto;display:block}
+#iw-exp .logo-word{font-weight:800;font-size:16px;letter-spacing:-.02em;color:var(--ink)}
+#iw-exp .menu{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0;font-size:13px;font-weight:700}
+#iw-exp .menu>li{position:relative}
+#iw-exp .menu>li>a{display:flex;align-items:center;gap:5px;padding:12px 12px;border-radius:12px;transition:.25s}
+#iw-exp .sub-caret{display:none}
+#iw-exp .menu>li>a:hover{background:#fff;color:var(--deep)}
+#iw-exp .mega{position:absolute;left:0;top:calc(100% + 10px);width:380px;padding:9px;margin:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#fffffff5;border:1px solid #fff;border-radius:15px;box-shadow:0 20px 44px #12271d22;backdrop-filter:blur(16px);opacity:0;visibility:hidden;transform:translateY(10px) scale(.98);transition:.25s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .has-sub:hover .mega{opacity:1;visibility:visible;transform:none}
+#iw-exp .mega a{display:flex!important;flex-direction:column;border-radius:11px;overflow:hidden;border:1px solid #eaece5}
+#iw-exp .mega img{width:100%;height:78px;object-fit:cover;transition:.4s}
+#iw-exp .mega a:hover img{transform:scale(1.07)}
+#iw-exp .mega b{display:block;padding:8px 10px 2px;font-size:12px}
+#iw-exp .mega small{display:block;padding:0 10px 9px;font-size:10px;color:#82897f}
+#iw-exp .actions{display:flex;align-items:center;gap:7px}
+#iw-exp .icon{width:38px;height:38px;border:1px solid #dfe6df;border-radius:12px;display:grid;place-items:center;background:#ffffffb0;color:var(--deep);transition:.25s}
+#iw-exp .icon:hover{background:var(--deep);color:#fff}
+#iw-exp .icon svg{width:16px;height:16px}
+#iw-exp .burger{display:none;width:38px;height:38px;border:1px solid #dfe6df;border-radius:12px;place-items:center;flex:0 0 auto;transition:.25s}
+#iw-exp .burger span{display:block;width:16px;height:1.5px;background:var(--ink);position:relative;transition:.25s}
+#iw-exp .burger span:before,#iw-exp .burger span:after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:var(--ink);transition:.25s}
+#iw-exp .burger span:before{top:-5px}#iw-exp .burger span:after{top:5px}
+#iw-exp .burger.is-active span{background:transparent}
+#iw-exp .burger.is-active span:before{top:0;transform:rotate(45deg)}
+#iw-exp .burger.is-active span:after{top:0;transform:rotate(-45deg)}
+#iw-exp .menu-scrim{position:fixed;inset:0;background:#0a0e0b66;backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .25s ease;z-index:75}
+#iw-exp .menu-scrim.is-visible{opacity:1;visibility:visible}
+@media(max-width:1100px){
+  #iw-exp .menu{display:flex;flex-direction:column;align-items:stretch;gap:2px;position:fixed;left:16px;right:16px;top:98px;background:#fff;padding:14px;border-radius:18px;box-shadow:0 24px 60px #0002;z-index:90;max-height:calc(100vh - 120px);overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-10px) scale(.98);transition:opacity .25s cubic-bezier(.2,.8,.2,1),transform .25s cubic-bezier(.2,.8,.2,1),visibility .25s}
+  #iw-exp .menu.is-open{opacity:1;visibility:visible;transform:none}
+  #iw-exp .burger{display:grid}
+  #iw-exp .menu>li>a{padding:14px 12px;font-size:15px}
+  #iw-exp .has-sub .mega{position:static;width:auto;opacity:1;visibility:visible;transform:none;display:none;box-shadow:none;border:0;background:#f7faf6;margin-top:4px;grid-template-columns:1fr 1fr}
+  #iw-exp .has-sub.is-expanded .mega{display:grid}
+  #iw-exp .has-sub>a{justify-content:space-between}
+  #iw-exp .sub-caret{display:block}
+  #iw-exp .has-sub>a .sub-caret{transition:.25s;flex:0 0 auto}
+  #iw-exp .has-sub.is-expanded>a .sub-caret{transform:rotate(180deg)}
+}
+@media(hover:none),(pointer:coarse){#iw-exp .has-sub:hover .mega{opacity:0;visibility:hidden}}
+
+/* ============ PROMO BANNER — directly under header ============ */
+#iw-exp .promo{position:relative;background:linear-gradient(90deg,var(--deep2),var(--deep) 55%,var(--deep2));overflow:hidden}
+#iw-exp .promo-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;padding:16px 0;text-align:center}
+#iw-exp .promo-line{display:inline-flex;align-items:center;gap:10px;flex-wrap:nowrap}
+#iw-exp .promo-script{font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:#fff;font-size:clamp(20px,2.6vw,32px);white-space:nowrap}
+#iw-exp .promo-strong{font-family:'Plus Jakarta Sans',Arial,sans-serif;font-weight:800;letter-spacing:-.02em;color:var(--green);font-size:clamp(20px,2.6vw,32px);text-transform:uppercase;white-space:nowrap}
+#iw-exp .promo-ico{font-size:26px;line-height:1;flex:0 0 auto}
+#iw-exp .promo-off{color:#fff;font-size:14px;font-weight:600;white-space:nowrap}
+#iw-exp .promo-off b{font-family:'Plus Jakarta Sans',Arial,sans-serif;font-weight:800;font-size:clamp(18px,2.4vw,28px);letter-spacing:-.02em;margin:0 3px}
+#iw-exp .promo-cta{border-radius:99px;padding:11px 22px;background:#fff;color:var(--deep2);font-size:13px;font-weight:800;letter-spacing:.02em;white-space:nowrap;transition:.25s;flex:0 0 auto}
+#iw-exp .promo-cta:hover{background:var(--green);color:#062606;transform:translateY(-2px)}
+#iw-exp .promo-grain{position:absolute;top:0;bottom:0;width:130px;opacity:.16;pointer-events:none}
+#iw-exp .promo-grain svg{width:100%;height:100%}
+#iw-exp .promo-grain.left{left:-10px}
+#iw-exp .promo-grain.right{right:-10px;transform:scaleX(-1)}
+@media(max-width:700px){#iw-exp .promo-inner{gap:10px;padding:14px 20px}#iw-exp .promo-grain{width:70px;opacity:.1}}
+@media(max-width:420px){#iw-exp .promo-script{font-size:19px}#iw-exp .promo-strong{font-size:19px}#iw-exp .promo-off{font-size:13px}#iw-exp .promo-off b{font-size:17px}#iw-exp .promo-cta{padding:10px 20px;font-size:12px}}
+
+/* ============ 01 OPENING ============ */
+#iw-exp .opening{padding:38px 0 0;background:#fff}
+#iw-exp .opening-grid{display:grid;grid-template-columns:.86fr 1.3fr .84fr;gap:0;min-height:640px;align-items:stretch}
+#iw-exp .op-left{display:flex;flex-direction:column;justify-content:center;padding:10px 28px 10px 0}
+#iw-exp .op-stat{font-size:12px;color:var(--muted);margin-bottom:22px;display:flex;align-items:center;gap:8px}
+#iw-exp .op-stat b{color:var(--ink)}
+#iw-exp .op-title{font-family:'Plus Jakarta Sans',Arial,sans-serif;font-weight:800;letter-spacing:-.05em;line-height:.86;font-size:clamp(46px,6.1vw,86px);text-transform:uppercase}
+#iw-exp .op-title em{font-style:normal;color:var(--green-deep)}
+#iw-exp .op-sub{margin-top:26px;max-width:320px;color:var(--muted);font-size:16px;line-height:26px}
+#iw-exp .op-center{position:relative;border-radius:4px;overflow:hidden;background:#171b18}
+#iw-exp .op-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform,opacity;transition:transform .1s linear,opacity .45s ease}
+#iw-exp .op-layer.l1,#iw-exp .op-layer.l1b{z-index:1}
+#iw-exp .op-chip{position:absolute;left:22px;top:22px;z-index:3;background:#ffffffe6;backdrop-filter:blur(8px);border-radius:99px;padding:8px 14px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--deep);transition:.3s}
+#iw-exp .op-right{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:10px 4px 10px 28px;border-left:1px solid var(--line)}
+#iw-exp .op-pick{display:flex;align-items:center;gap:12px;padding:13px 6px;cursor:pointer;transition:.25s;border-bottom:1px solid var(--line)}
+#iw-exp .op-pick:first-child{border-top:1px solid var(--line)}
+#iw-exp .op-pick i{font-style:normal;font-size:11px;color:var(--muted);width:20px}
+#iw-exp .op-pick b{font-size:15px;font-weight:700;transition:.2s}
+#iw-exp .op-pick.is-active b,#iw-exp .op-pick:hover b{color:var(--green-deep);padding-left:4px}
+#iw-exp .op-foot{display:flex;justify-content:center;padding:22px 0 26px;font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--muted);gap:8px;align-items:center}
+#iw-exp .op-foot svg{width:12px;height:12px;animation:iwBounce 1.8s ease-in-out infinite}
+@keyframes iwBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(prefers-reduced-motion:reduce){#iw-exp .op-foot svg{animation:none}}
+
+/* ============ SECONDARY HERO — premium bg slider ============ */
+#iw-exp .hero2{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:#0d1210;isolation:isolate}
+#iw-exp .hero2-media{position:absolute;inset:0;z-index:0}
+#iw-exp .hero2-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;animation:hero2Fade 20s infinite}
+#iw-exp .hero2-slide:nth-child(1){animation-delay:0s}
+#iw-exp .hero2-slide:nth-child(2){animation-delay:-4s}
+#iw-exp .hero2-slide:nth-child(3){animation-delay:-8s}
+#iw-exp .hero2-slide:nth-child(4){animation-delay:-12s}
+#iw-exp .hero2-slide:nth-child(5){animation-delay:-16s}
+@keyframes hero2Fade{0%{opacity:0}3%{opacity:1}17%{opacity:1}20%{opacity:0}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){#iw-exp .hero2-slide{animation:none;opacity:0}#iw-exp .hero2-slide:first-child{opacity:1}}
+#iw-exp .hero2-media:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#0a0e0bd9 0%,#0a0e0b8c 42%,#0a0e0b26 78%),linear-gradient(0deg,#0a0e0bcc 0%,transparent 32%)}
+#iw-exp .hero2-inner{position:relative;z-index:2;padding:60px 0}
+#iw-exp .hero2-inner .eyebrow{color:#bff4bd}
+#iw-exp .hero2-inner .eyebrow:before{background:var(--green)}
+#iw-exp .hero2-title{font-family:'Plus Jakarta Sans',Arial,sans-serif;font-weight:800;letter-spacing:-.04em;line-height:.98;color:#fff;text-transform:uppercase;font-size:clamp(36px,5.4vw,64px);max-width:640px;margin:20px 0 20px}
+#iw-exp .hero2-title em{font-style:normal;color:var(--green)}
+#iw-exp .hero2-sub{color:#d7ddd4;max-width:440px;font-size:16px;line-height:25px;margin-bottom:30px}
+#iw-exp .hero2-actions{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:640px){#iw-exp .hero2{min-height:82vh}#iw-exp .hero2-inner{padding:0}#iw-exp .hero2-media:after{background:linear-gradient(0deg,#080a08f0 0%,#080a08c4 55%,#080a0866 100%)}#iw-exp .hero2-title{font-size:clamp(32px,10vw,44px);max-width:100%}#iw-exp .hero2-sub{max-width:100%;font-size:14.5px;line-height:22px}#iw-exp .hero2-actions{flex-direction:column;align-items:stretch}#iw-exp .hero2-actions .btn{justify-content:center;width:100%}}
+
+/* ============ SHOP BY CATEGORY ============ */
+#iw-exp .catgrid{padding:96px 0 100px;background:var(--ink)}
+#iw-exp .catgrid-head{margin-bottom:40px;position:relative;z-index:2}
+#iw-exp .catgrid-head .eyebrow{color:#bff4bd}
+#iw-exp .catgrid-head .eyebrow:before{background:var(--green)}
+#iw-exp .catgrid-head p{color:#a9b0a7;max-width:460px;margin-top:14px;font-size:16px}
+#iw-exp .catgrid-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+#iw-exp .cat-card{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:3/4;display:block;background:#141915}
+#iw-exp .cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .cat-card:hover img{transform:scale(1.08)}
+#iw-exp .cat-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080a08e6 0%,#080a0840 46%,transparent 68%)}
+#iw-exp .cat-card-info{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:18px 16px;color:#fff}
+#iw-exp .cat-card-info span{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:6px}
+#iw-exp .cat-card-info b{font-size:16px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
+#iw-exp .cat-card-info b svg{width:13px;height:13px;transition:transform .3s}
+#iw-exp .cat-card:hover .cat-card-info b svg{transform:translateX(4px)}
+@media(max-width:900px){#iw-exp .catgrid-row{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){#iw-exp .catgrid-row{grid-template-columns:repeat(2,1fr);gap:10px}#iw-exp .catgrid{padding:56px 0 60px}#iw-exp .cat-card-info{padding:14px 12px}#iw-exp .cat-card-info b{font-size:13.5px;gap:6px}#iw-exp .cat-card-info span{font-size:9px;margin-bottom:4px}}
+@media(max-width:480px){#iw-exp .catgrid-row{grid-template-columns:1fr;gap:12px}#iw-exp .cat-card{aspect-ratio:16/11}#iw-exp .cat-card-info b{font-size:16px}#iw-exp .cat-card-info span{font-size:10px}}
+
+/* ============ 03 CANVAS (asymmetric featured products) ============ */
+#iw-exp .canvas{padding:96px 0;background:#fbfbf8}
+#iw-exp .canvas-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:42px}
+#iw-exp .canvas-head h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.035em;line-height:1.05;max-width:560px}
+#iw-exp .canvas-head a{font-size:13px;font-weight:800;color:var(--deep);border-bottom:1px solid var(--deep);padding-bottom:4px;white-space:nowrap}
+#iw-exp .canvas-grid{display:grid;grid-template-columns:1.4fr .9fr;grid-template-rows:auto auto;gap:16px}
+#iw-exp .prod{position:relative;border-radius:6px;overflow:hidden;background:#eee;display:block}
+#iw-exp .prod img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .prod:hover img{transform:scale(1.05)}
+#iw-exp .prod-feat{grid-row:1/3;min-height:560px}
+#iw-exp .prod-info{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px;display:flex;justify-content:space-between;align-items:end;color:#fff;background:linear-gradient(0deg,#0a0e0bd6,transparent 60%);transform:translateY(14px);opacity:.92;transition:.35s}
+#iw-exp .prod:hover .prod-info{transform:none;opacity:1}
+#iw-exp .prod-info h3{font-size:19px;margin-bottom:5px}
+#iw-exp .prod-info span{font-size:12px;opacity:.85}
+#iw-exp .prod-price{font-size:15px;font-weight:800;background:#fff;color:var(--ink);padding:8px 12px;border-radius:99px;flex:0 0 auto}
+#iw-exp .prod-badge{position:absolute;top:14px;left:14px;z-index:2;background:var(--green);color:#062606;font-size:10px;font-weight:800;letter-spacing:.08em;padding:6px 10px;border-radius:99px}
+#iw-exp .prod-side{min-height:270px}
+#iw-exp .canvas-grid.is-uniform{grid-template-columns:repeat(4,1fr);grid-template-rows:none}
+#iw-exp .canvas-grid.is-uniform .prod{min-height:330px}
+@media(max-width:900px){#iw-exp .canvas-grid{grid-template-columns:1fr}#iw-exp .prod-feat{grid-row:auto;min-height:380px}#iw-exp .canvas-grid.is-uniform{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){#iw-exp .canvas-grid.is-uniform{grid-template-columns:1fr}}
+
+/* ============ 04 PROCESS ============ */
+#iw-exp .process{padding:110px 0;background:var(--cream)}
+#iw-exp .process-head{max-width:600px;margin-bottom:56px}
+#iw-exp .process-head h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.035em;line-height:1.08;margin-top:14px}
+#iw-exp .process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+#iw-exp .process-step{background:#fff;border:1px solid #e7e3d5;border-radius:16px;padding:30px 24px;position:relative;transition:.3s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .process-step:hover{transform:translateY(-4px);box-shadow:0 18px 34px #16362a14;border-color:#d9e6dc}
+#iw-exp .process-icon{width:52px;height:52px;border-radius:13px;background:var(--deep);color:var(--green);display:grid;place-items:center;margin-bottom:22px}
+#iw-exp .process-icon svg{width:24px;height:24px}
+#iw-exp .process-step h3{font-size:18px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+#iw-exp .process-step p{font-size:14.5px;color:var(--muted);line-height:22px}
+@media(max-width:900px){#iw-exp .process-row{grid-template-columns:1fr 1fr;row-gap:16px}}
+@media(max-width:640px){#iw-exp .process{padding:70px 0}#iw-exp .process-row{grid-template-columns:1fr;row-gap:14px}#iw-exp .process-step{padding:26px 22px}}
+
+/* ============ 05 RAIL ============ */
+#iw-exp .rail-wrap{padding:90px 0 100px;background:#fff}
+#iw-exp .rail-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px;gap:20px}
+#iw-exp .rail-head h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.03em}
+#iw-exp .rail-hint{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:7px}
+#iw-exp .rail-hint svg{width:16px;height:16px}
+#iw-exp .rail-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;cursor:grab;padding-bottom:6px;scrollbar-width:none}
+#iw-exp .rail-track::-webkit-scrollbar{display:none}
+#iw-exp .rail-track.dragging{cursor:grabbing;scroll-snap-type:none}
+#iw-exp .rail-track.dragging .plank{pointer-events:none}
+#iw-exp .plank{flex:0 0 auto;width:min(72vw,420px);scroll-snap-align:start;border-radius:6px;overflow:hidden;position:relative;background:#eee;aspect-ratio:16/10}
+#iw-exp .plank img{width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none}
+#iw-exp .plank-info{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;display:flex;justify-content:space-between;align-items:end;color:#fff;background:linear-gradient(0deg,#0a0e0bd0,transparent 65%)}
+#iw-exp .plank-info h3{font-size:16px}
+#iw-exp .plank-info b{font-size:14px;background:#fff;color:var(--ink);padding:7px 11px;border-radius:99px}
+
+/* ============ 06 POSTER ============ */
+#iw-exp .poster{padding:100px 0;background:#fff}
+#iw-exp .poster-shell{position:relative;min-height:560px;border-radius:22px;overflow:hidden;background:var(--deep2);display:grid;grid-template-columns:1fr 1fr}
+#iw-exp .poster-copy{padding:70px 40px 60px 58px;color:#fff;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
+#iw-exp .poster-copy .eyebrow{color:#bdf0b9}#iw-exp .poster-copy .eyebrow:before{background:var(--green)}
+#iw-exp .poster-copy h2{font-size:clamp(34px,4.4vw,54px);line-height:1.04;letter-spacing:-.03em;margin:16px 0 18px}
+#iw-exp .poster-copy p{color:#cfe0da;max-width:440px;margin-bottom:24px;font-size:16px}
+#iw-exp .poster-points{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:28px}
+#iw-exp .poster-points span{font-size:12px;font-weight:700;display:flex;align-items:center;gap:7px}
+#iw-exp .poster-points i{font-style:normal;width:19px;height:19px;border-radius:50%;background:var(--green);color:#0a2b0a;display:grid;place-items:center;font-size:11px}
+#iw-exp .poster-actions{display:flex;gap:10px;flex-wrap:wrap}
+#iw-exp .poster-media{position:relative}
+#iw-exp .poster-media img{width:100%;height:100%;object-fit:cover}
+#iw-exp .poster-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--deep2),transparent 26%)}
+@media(max-width:900px){#iw-exp .poster-shell{grid-template-columns:1fr}#iw-exp .poster-media{min-height:280px}#iw-exp .poster-copy{padding:48px 26px}}
+@media(max-width:640px){#iw-exp .poster{padding:70px 0}}
+
+/* ============ SHOP BY PATTERN ============ */
+#iw-exp .patgrid{padding:96px 0;background:#fbfbf8}
+#iw-exp .patgrid-head{text-align:center;max-width:640px;margin:0 auto 44px}
+#iw-exp .patgrid-head .eyebrow{justify-content:center}
+#iw-exp .patgrid-head h2{font-size:clamp(28px,3.6vw,42px);letter-spacing:-.03em;margin-top:14px}
+#iw-exp .patgrid-head p{color:var(--muted);font-size:16px;margin-top:12px}
+#iw-exp .patgrid-row{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+#iw-exp .pat-card{position:relative;border-radius:50%;overflow:hidden;aspect-ratio:1/1;display:block;background:#eee;border:1px solid var(--line)}
+#iw-exp .pat-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .pat-card:hover img{transform:scale(1.12)}
+#iw-exp .pat-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080a08a8 0%,transparent 55%);opacity:0;transition:.3s}
+#iw-exp .pat-card:hover:after{opacity:1}
+#iw-exp .pat-label{display:block;text-align:center;margin-top:14px;font-size:17px;font-weight:800;letter-spacing:-.01em}
+@media(max-width:900px){#iw-exp .patgrid-row{grid-template-columns:repeat(3,1fr);row-gap:34px}}
+@media(max-width:640px){#iw-exp .patgrid-row{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ COMMERCIAL FLOORING RANGES ============ */
+#iw-exp .commercial{padding:100px 0;background:var(--deep2);color:#fff}
+#iw-exp .commercial-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px}
+#iw-exp .commercial-head .eyebrow{color:#bff4bd}
+#iw-exp .commercial-head .eyebrow:before{background:var(--green)}
+#iw-exp .commercial-head h2{font-size:clamp(28px,3.6vw,42px);letter-spacing:-.03em;margin-top:14px;max-width:480px}
+#iw-exp .commercial-head p{color:#a9c2ba;font-size:15px;max-width:300px;text-align:right}
+#iw-exp .commercial-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+#iw-exp .comm-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;display:block;background:#0a1512}
+#iw-exp .comm-card img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1);opacity:.82}
+#iw-exp .comm-card:hover img{transform:scale(1.08);opacity:1}
+#iw-exp .comm-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#08160fF2 0%,#08160f66 42%,transparent 66%)}
+#iw-exp .comm-num{position:absolute;top:16px;left:16px;z-index:2;font-size:12px;font-weight:800;color:#8fe08c}
+#iw-exp .comm-body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px 18px}
+#iw-exp .comm-body h3{font-size:17px;margin-bottom:8px;color:#fff}
+#iw-exp .comm-body p{font-size:11.5px;line-height:18px;color:#c6d3cc}
+@media(max-width:900px){#iw-exp .commercial-head{flex-direction:column;align-items:flex-start}#iw-exp .commercial-head p{text-align:left}#iw-exp .commercial-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){#iw-exp .commercial{padding:70px 0}}
+
+/* ============ FLOORING SERVICES — two-up feature ============ */
+#iw-exp .svcband{padding:96px 0 44px;background:#fff}
+#iw-exp .svcband-head{text-align:center;max-width:640px;margin:0 auto 40px}
+#iw-exp .svcband-head .eyebrow{justify-content:center}
+#iw-exp .svcband-head h2{font-size:clamp(28px,3.6vw,42px);letter-spacing:-.03em;margin-top:14px}
+#iw-exp .svcband-head p{color:var(--muted);font-size:16px;margin-top:12px}
+#iw-exp .svcband-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#iw-exp .svc-feat{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:16/11;display:block;background:#141915}
+#iw-exp .svc-feat img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .svc-feat:hover img{transform:scale(1.06)}
+#iw-exp .svc-feat:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080a08b0 0%,transparent 46%)}
+#iw-exp .svc-tag{position:absolute;left:20px;right:20px;bottom:20px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:14px;background:#ffffffe6;backdrop-filter:blur(10px);border-radius:99px;padding:14px 14px 14px 22px}
+#iw-exp .svc-tag b{font-size:15px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+#iw-exp .svc-tag i{width:38px;height:38px;border-radius:99px;background:var(--deep);color:#fff;display:grid;place-items:center;flex:0 0 auto;transition:.3s}
+#iw-exp .svc-tag i svg{width:15px;height:15px}
+#iw-exp .svc-feat:hover .svc-tag i{background:var(--green);color:#062606;transform:rotate(45deg)}
+@media(max-width:800px){#iw-exp .svcband-row{grid-template-columns:1fr}#iw-exp .svcband{padding:70px 0 34px}}
+
+/* ============ GENERAL FLOORING SERVICES — 12-up grid ============ */
+#iw-exp .svcgrid{padding:44px 0 100px;background:#fff}
+#iw-exp .svcgrid-head{text-align:center;max-width:720px;margin:0 auto 40px}
+#iw-exp .svcgrid-head .eyebrow{justify-content:center}
+#iw-exp .svcgrid-head h2{font-size:clamp(28px,3.6vw,42px);letter-spacing:-.03em;margin-top:14px}
+#iw-exp .svcgrid-head p{color:var(--muted);font-size:15px;margin-top:12px;line-height:24px}
+#iw-exp .svcgrid-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+#iw-exp .svc-card{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:4/3.1;display:block;background:#141915}
+#iw-exp .svc-card img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .svc-card:hover img{transform:scale(1.08)}
+#iw-exp .svc-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,8,7,.68) 0%,rgba(5,8,7,.22) 27%,transparent 52%);opacity:1}
+#iw-exp .svc-card-info{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+#iw-exp .svc-card-info b{font-size:15px;font-weight:800;letter-spacing:-.015em;color:#fff;line-height:1.25;text-shadow:0 2px 12px #000}
+#iw-exp .svc-card-info svg{width:15px;height:15px;color:#fff;filter:drop-shadow(0 2px 5px #000);flex:0 0 auto;transition:transform .3s}
+#iw-exp .svc-card:hover .svc-card-info svg{transform:translate(3px,-3px)}
+@media(max-width:900px){#iw-exp .svcgrid-row{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){#iw-exp .svcgrid-row{grid-template-columns:repeat(2,1fr)}#iw-exp .svcgrid{padding:24px 0 70px}}
+
+/* ============ CALL BAND ============ */
+#iw-exp .callband{position:relative;overflow:hidden;background:#0a1512}
+#iw-exp .callband-media{position:absolute;inset:0;z-index:0}
+#iw-exp .callband-media img{width:100%;height:100%;object-fit:cover;opacity:.32}
+#iw-exp .callband-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0a1512 22%,#0a1512cc 60%,#0a151299)}
+#iw-exp .callband-inner{position:relative;z-index:2;padding:70px 0;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+#iw-exp .callband-copy .eyebrow{color:#bff4bd}
+#iw-exp .callband-copy .eyebrow:before{background:var(--green)}
+#iw-exp .callband-copy h2{color:#fff;font-size:clamp(24px,3vw,36px);letter-spacing:-.03em;margin-top:14px;max-width:420px}
+#iw-exp .callband-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+#iw-exp .call-num{display:flex;align-items:center;gap:14px;background:#ffffff10;border:1px solid #ffffff26;border-radius:16px;padding:14px 22px}
+#iw-exp .call-num i{width:42px;height:42px;border-radius:50%;background:var(--green);color:#062606;display:grid;place-items:center;flex:0 0 auto}
+#iw-exp .call-num i svg{width:18px;height:18px}
+#iw-exp .call-num b{display:block;font-size:18px;color:#fff;font-weight:800}
+#iw-exp .call-num small{display:block;font-size:11px;color:#a9b0a7;letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:900px){#iw-exp .callband-inner{flex-direction:column;align-items:flex-start}}
+
+/* ============ PROJECT GALLERY ============ */
+#iw-exp .pgallery{padding:100px 0}
+#iw-exp .pgallery-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:34px}
+#iw-exp .pgallery-head h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.03em}
+#iw-exp .pgallery-head a{font-size:13px;font-weight:800;color:var(--deep);border-bottom:1px solid var(--deep);padding-bottom:4px;white-space:nowrap}
+#iw-exp .pgallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+#iw-exp .pg-item{position:relative;border-radius:8px;overflow:hidden;background:#eee;aspect-ratio:1/1}
+#iw-exp .pg-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+#iw-exp .pg-item:hover img{transform:scale(1.06)}
+#iw-exp .pg-cap{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;font-size:12px;font-weight:700;color:#fff;background:linear-gradient(0deg,#080a08cc,transparent 75%);opacity:0;transform:translateY(6px);transition:.3s}
+#iw-exp .pg-item:hover .pg-cap{opacity:1;transform:none}
+@media(max-width:900px){#iw-exp .pgallery-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){#iw-exp .pgallery{padding:64px 0}}
+
+/* ============ 08 PROOF ============ */
+#iw-exp .proof{padding:100px 0;background:var(--cream)}
+#iw-exp .proof-grid{display:grid;grid-template-columns:.55fr 1fr;gap:16px;align-items:center}
+#iw-exp .quote-mark{font-family:'Fraunces',serif;font-size:110px;color:#c8dfc5;line-height:.5}
+#iw-exp .quote-text{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(20px,2.6vw,30px);line-height:1.4;max-width:640px;margin:26px 0 26px}
+#iw-exp .quote-by{display:flex;gap:12px;align-items:center}
+#iw-exp .quote-by img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+#iw-exp .quote-by b{display:block;font-size:13px}
+#iw-exp .quote-by small{color:var(--muted);font-size:12px}
+@media(max-width:900px){#iw-exp .proof-grid{grid-template-columns:1fr}}
+
+/* ============ 09 FAQ ============ */
+#iw-exp .faq{padding:96px 0}
+#iw-exp .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+#iw-exp .faq-grid h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.03em;margin:12px 0 14px}
+#iw-exp .faq-grid p{color:var(--muted);font-size:16px;max-width:330px}
+#iw-exp .faq-item{border-bottom:1px solid var(--line)}
+#iw-exp .faq-q{width:100%;display:flex;justify-content:space-between;text-align:left;padding:20px 0;font-weight:800;font-size:14px}
+#iw-exp .faq-q span{transition:.3s}
+#iw-exp .faq-a{max-height:0;overflow:hidden;color:var(--muted);font-size:13px;transition:max-height .4s ease}
+#iw-exp .faq-item.is-open .faq-a{max-height:150px;padding-bottom:19px}
+#iw-exp .faq-item.is-open .faq-q span{transform:rotate(45deg)}
+@media(max-width:900px){#iw-exp .faq-grid{grid-template-columns:1fr;gap:24px}}
+
+/* ============ 10 FINAL CTA ============ */
+#iw-exp .final{background:#101713;color:#fff;padding:100px 0 0}
+#iw-exp .final-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+#iw-exp .final h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.03em;margin:14px 0}
+#iw-exp .final p{color:#a9b2ac;max-width:360px;font-size:16px}
+#iw-exp .final-list{display:grid;gap:12px;margin-top:24px;font-size:14px;color:#cfd6d0}
+#iw-exp .final-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#iw-exp .final-form input,#iw-exp .final-form select,#iw-exp .final-form textarea{border:1px solid #ffffff26;background:#ffffff0c;color:#fff;border-radius:10px;padding:14px;outline:0;width:100%}
+#iw-exp .final-form textarea{grid-column:1/3;min-height:100px;resize:vertical}
+#iw-exp .final-form button{grid-column:1/3}
+@media(max-width:900px){#iw-exp .final-grid{grid-template-columns:1fr}#iw-exp .final-form{grid-template-columns:1fr}#iw-exp .final-form textarea,#iw-exp .final-form button{grid-column:auto}}
+
+/* ============ FOOTER ============ */
+#iw-exp .footer{padding:80px 0 0;overflow:hidden}
+#iw-exp .footer-cols{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:40px;padding-bottom:50px;border-bottom:1px solid #ffffff17}
+#iw-exp .footer-cols p{font-size:12px;color:#9aa39d;max-width:260px}
+#iw-exp .footer h3{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#fff;margin-bottom:16px}
+#iw-exp .footer a{display:block;font-size:12px;color:#9aa39d;margin:9px 0}
+#iw-exp .newsletter{display:flex;background:#ffffff0f;border:1px solid #ffffff22;border-radius:99px;padding:5px;margin-top:16px;max-width:280px}
+#iw-exp .newsletter input{flex:1;background:transparent;border:0;outline:0;padding:0 14px;color:#fff;font-size:13px}
+#iw-exp .newsletter button{background:var(--green);color:#062606;font-weight:800;font-size:12px;border-radius:99px;padding:11px 16px}
+#iw-exp .wordmark{font-weight:800;letter-spacing:-.05em;font-size:clamp(60px,14vw,220px);line-height:.8;text-align:center;padding:40px 0 14px;color:#1b231e;user-select:none}
+#iw-exp .copy{display:flex;justify-content:space-between;padding:0 0 22px;font-size:11px;color:#7d857f}
+@media(max-width:900px){#iw-exp .footer-cols{grid-template-columns:1fr 1fr}#iw-exp .footer-cols>div:first-child{grid-column:1/3}}
+@media(max-width:640px){#iw-exp .copy{flex-direction:column;gap:6px}}
+
+/* ============ RESPONSIVE — NAV / OPENING / DISCOVER ============ */
+@media(max-width:1080px){#iw-exp .opening-grid{grid-template-columns:1fr;min-height:0}#iw-exp .op-left{padding:0 0 26px}#iw-exp .op-center{height:52vh;min-height:340px}#iw-exp .op-right{border-left:0;border-top:1px solid var(--line);padding:20px 0 0;margin-top:26px}}
+@media(max-width:640px){#iw-exp .shell{width:min(100% - 28px,1320px)}#iw-exp .topbar{display:none}#iw-exp .nav-space{height:96px}#iw-exp .nav{border-radius:16px;padding:6px 8px 6px 14px;min-height:68px}#iw-exp .logo-mark{height:auto;max-height:56px;width:auto}#iw-exp .menu{top:82px}#iw-exp .actions .icon:nth-child(2),#iw-exp .actions .icon:nth-child(3){display:none}#iw-exp .canvas-head,#iw-exp .rail-head,#iw-exp .pgallery-head{flex-direction:column;align-items:flex-start;gap:10px}#iw-exp .final-grid{gap:40px}#iw-exp .pgallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){#iw-exp .op-title{font-size:clamp(38px,12vw,56px)}#iw-exp .op-sub{max-width:none}#iw-exp .poster-points{gap:10px}#iw-exp .quote-mark{font-size:70px}}
+/* ============ GOOGLE REVIEWS WIDGET ============ */
+#iw-exp .greviews{background:var(--cream);padding:88px 0}
+#iw-exp .gr-head{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+#iw-exp .gr-head-left{display:flex;align-items:center;gap:16px}
+#iw-exp .gr-glogo{width:38px;height:38px;flex:0 0 auto}
+#iw-exp .gr-rating-line{display:flex;align-items:center;gap:10px}
+#iw-exp .gr-rating-line b{font-family:'Fraunces',serif;font-size:28px;font-weight:500;color:var(--ink)}
+#iw-exp .gr-stars{color:#fbbc04;font-size:16px;letter-spacing:2px}
+#iw-exp .gr-stars.small{font-size:14px}
+#iw-exp .gr-sub{font-size:13px;color:var(--muted);margin-top:2px}
+#iw-exp .gr-sub a{text-decoration:underline;text-underline-offset:2px}
+#iw-exp .gr-write{background:#fff;color:var(--ink);border:1px solid #dfe6df;padding:12px 20px;font-size:12px}
+#iw-exp .gr-write:hover{background:var(--ink);color:#fff;transform:none;box-shadow:none}
+#iw-exp .gr-track-wrap{position:relative}
+#iw-exp .gr-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;scrollbar-width:none}
+#iw-exp .gr-track::-webkit-scrollbar{display:none}
+#iw-exp .gr-card{scroll-snap-align:start;flex:0 0 300px;background:#fff;border:1px solid #e7e7df;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 26px #12271d0d}
+#iw-exp .gr-card-top{display:flex;align-items:center;gap:11px}
+#iw-exp .gr-avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:15px;flex:0 0 auto}
+#iw-exp .gr-who{flex:1;min-width:0}
+#iw-exp .gr-who b{display:block;font-size:14px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#iw-exp .gr-who span{display:block;font-size:10.5px;color:var(--muted)}
+#iw-exp .gr-gicon{width:18px;height:18px;flex:0 0 auto;opacity:.9}
+#iw-exp .gr-time{font-size:12px;color:var(--muted);margin-top:-4px}
+#iw-exp .gr-text{font-size:12.5px;line-height:1.65;color:#3a3f37}
+#iw-exp .gr-posted{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--muted);margin-top:auto;padding-top:4px}
+#iw-exp .gr-posted svg{width:13px;height:13px}
+#iw-exp .gr-nav{position:absolute;top:50%;translate:0 -50%;width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid #dfe6df;display:grid;place-items:center;box-shadow:0 10px 24px #12271d1a;z-index:5;transition:.25s}
+#iw-exp .gr-nav:hover{background:var(--ink);color:#fff}
+#iw-exp .gr-nav svg{width:16px;height:16px}
+#iw-exp .gr-prev{left:-14px}
+#iw-exp .gr-next{right:-14px}
+@media(max-width:720px){#iw-exp .gr-nav{display:none}#iw-exp .gr-card{flex-basis:82%}}
+
+/* 2026 premium refresh */
+#iw-exp .nav-wrap{padding-top:0;background:#ffffffed;border-bottom:1px solid #e8ece7;backdrop-filter:blur(18px) saturate(150%)}
+#iw-exp .nav-wrap>.shell{width:100%;max-width:none}
+#iw-exp .nav{min-height:108px;padding:8px clamp(22px,4vw,72px);border:0;border-radius:0;background:transparent;box-shadow:none}
+#iw-exp .logo-mark{content:url('https://interwood.ae/wp-content/uploads/2026/09/interwood-logo.png');height:88px;width:245px;object-fit:contain;animation:iwLogoArrival .8s cubic-bezier(.2,.8,.2,1) both,iwLogoFloat 5s ease-in-out 1s infinite}
+#iw-exp .logo:hover .logo-mark{filter:drop-shadow(0 8px 13px #174d4224)}
+@keyframes iwLogoArrival{from{opacity:0;transform:translateY(-8px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes iwLogoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+#iw-exp .menu{font-size:16px;gap:4px}
+#iw-exp .menu>li>a{padding:13px 14px}
+#iw-exp .hero2{min-height:48vh;height:480px;max-height:580px;align-items:stretch;background:var(--deep2)}
+#iw-exp .hero2-media{left:47%;overflow:hidden}
+#iw-exp .hero2-slide{animation:none!important;opacity:0}
+#iw-exp .hero2-slide:first-child{opacity:1}
+#iw-exp .hero2-media:after{background:linear-gradient(90deg,var(--deep2) 0%,#0e2f28bd 18%,transparent 62%),linear-gradient(0deg,#0a1e193d,transparent)}
+#iw-exp .hero2:before{content:"";position:absolute;inset:0 48% 0 0;background:radial-gradient(circle at 75% 15%,#1e6657 0,transparent 42%),var(--deep2);z-index:1}
+#iw-exp .hero2-inner{display:flex;flex-direction:column;justify-content:center;padding:42px 0}
+#iw-exp .hero2-title{font-size:clamp(34px,4.2vw,58px);max-width:610px;margin:12px 0 14px;text-transform:none;line-height:1.02}
+#iw-exp .hero2-sub{max-width:570px;margin:0;color:#dbe7e1}
+#iw-exp .hero2-actions{display:none}
+#iw-exp .patgrid{padding:112px 0 120px;background:#0b241e;color:#fff;overflow:hidden}
+#iw-exp .patgrid:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 87% 5%,#245f501f,transparent 31%),linear-gradient(135deg,transparent 0 72%,#ffffff05 72% 72.1%,transparent 72.1%);pointer-events:none}
+#iw-exp .patgrid-head{max-width:none;text-align:left;margin:0 auto 48px;display:grid;grid-template-columns:1.15fr .85fr;align-items:end;gap:80px}
+#iw-exp .patgrid-head .eyebrow{justify-content:flex-start;grid-column:1/-1;color:#b8e7bd}
+#iw-exp .patgrid-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(42px,5vw,68px);line-height:.98;margin:0;letter-spacing:-.035em;max-width:760px;color:#fff}
+#iw-exp .patgrid-head p{max-width:500px;margin:0 0 6px;color:#b8c8c2;font-size:15px;line-height:1.8}
+#iw-exp .patgrid-row{display:flex;gap:0;counter-reset:pattern;border:1px solid #ffffff25;border-radius:20px;overflow:hidden;background:#102d26;box-shadow:0 32px 70px #020a0738}
+#iw-exp .patgrid-row>div{counter-increment:pattern;position:relative;flex:1;min-width:0;text-align:left;transition:flex .5s cubic-bezier(.2,.8,.2,1);border-right:1px solid #ffffff2b}
+#iw-exp .patgrid-row>div:last-child{border-right:0}
+#iw-exp .patgrid-row>div:hover{flex:1.55}
+#iw-exp .pat-card{height:235px;display:block;border-radius:0;overflow:hidden;border:0;box-shadow:none;position:relative;background:#203d35}
+#iw-exp .pat-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#04100de8 0%,#06171145 55%,transparent 78%);transition:.35s}
+#iw-exp .pat-card:hover{transform:none;box-shadow:none}
+#iw-exp .pat-card:hover:after{background:linear-gradient(0deg,#04100dbd 0%,transparent 68%)}
+#iw-exp .pat-card img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(1.05);transition:transform .75s cubic-bezier(.2,.8,.2,1),filter .4s}
+#iw-exp .pat-card:hover img{transform:scale(1.07);filter:saturate(1) contrast(1.02)}
+#iw-exp .pat-label{position:absolute;z-index:3;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;margin:0;padding:22px 20px;font-size:15px;font-weight:800;color:#fff;pointer-events:none}
+#iw-exp .pat-label:after{content:"0" counter(pattern);font-size:10px;letter-spacing:.14em;color:#9ee7a6;border:1px solid #ffffff3d;border-radius:99px;padding:6px 9px}
+#iw-exp .process{padding:110px 0;background:#0d231e;color:#fff;overflow:hidden}
+#iw-exp .process:before{content:"04";position:absolute;right:-20px;top:-95px;font-size:340px;font-weight:800;line-height:1;color:#ffffff05}
+#iw-exp .process-head{max-width:760px;margin-bottom:50px}
+#iw-exp .process-head .eyebrow{color:#aaf0b2}
+#iw-exp .process-head h2{font-size:clamp(36px,4.5vw,58px);color:#fff}
+#iw-exp .process-row{counter-reset:steps;gap:0;border-top:1px solid #ffffff24}
+#iw-exp .process-step{counter-increment:steps;background:transparent;border:0;border-right:1px solid #ffffff24;border-radius:0;padding:34px 30px 12px;min-height:300px;color:#fff}
+#iw-exp .process-step:last-child{border-right:0}
+#iw-exp .process-step:before{content:"0" counter(steps);display:block;font-size:11px;font-weight:800;letter-spacing:.16em;color:#7fd887;margin-bottom:32px}
+#iw-exp .process-step:hover{transform:none;box-shadow:none;border-color:#ffffff24;background:#ffffff08}
+#iw-exp .process-icon{background:#d9ffdc;color:#0d3e32;border-radius:50%;margin-bottom:24px}
+#iw-exp .process-step h3{font-size:22px}
+#iw-exp .process-step p{font-size:14px;color:#b9c8c2;line-height:1.65}
+#iw-exp .poster{padding:110px 0;background:#edf1eb}
+#iw-exp .poster-shell{min-height:500px;border-radius:30px;grid-template-columns:.9fr 1.1fr;box-shadow:0 35px 80px #173d3223}
+#iw-exp .poster-copy{padding:68px clamp(30px,5vw,74px);background:radial-gradient(circle at 10% 10%,#256858 0,transparent 36%),var(--deep2)}
+#iw-exp .poster-copy h2{font-size:clamp(40px,5vw,62px)}
+#iw-exp .poster-points{padding-top:18px;border-top:1px solid #ffffff26}
+#iw-exp .poster-media:after{background:linear-gradient(90deg,var(--deep2),transparent 18%)}
+#iw-exp .pgallery-grid{grid-template-columns:repeat(4,1fr);gap:14px}
+#iw-exp .pg-item{aspect-ratio:1/1;border-radius:8px;grid-column:auto!important;grid-row:auto!important}
+#iw-exp .pg-cap{opacity:0;transform:translateY(8px);background:linear-gradient(0deg,#07110de6,transparent);padding:48px 16px 15px;font-size:12px}
+#iw-exp .pg-item:hover .pg-cap{opacity:1;transform:none}
+#iw-exp .footer-logo{display:inline-flex;align-items:center;background:transparent;border-radius:0;padding:0;margin:0 0 24px}
+#iw-exp .footer-logo img{content:url('https://interwood.ae/wp-content/uploads/2026/09/interwood-logo.png');height:96px;width:280px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1);animation:iwLogoFloat 5s ease-in-out infinite}
+@media(max-width:1100px){#iw-exp .nav-wrap>.shell{width:100%}#iw-exp .patgrid-row{overflow-x:auto;scroll-snap-type:x proximity;border-radius:16px}#iw-exp .patgrid-row>div{flex:0 0 280px;scroll-snap-align:start}#iw-exp .patgrid-row>div:hover{flex-basis:280px}}
+@media(max-width:900px){#iw-exp .process-row{grid-template-columns:1fr 1fr}#iw-exp .process-step{border-bottom:1px solid #ffffff24}#iw-exp .pg-item:nth-child(n){grid-column:auto;grid-row:auto}}
+@media(max-width:640px){#iw-exp .nav{min-height:82px;border-radius:0;padding:6px 14px}#iw-exp .logo-mark{height:68px;width:190px}#iw-exp .hero2{height:auto;min-height:450px}#iw-exp .hero2-media{left:0;opacity:.42}#iw-exp .hero2:before{inset:0;background:linear-gradient(90deg,#0e2f28f2,#0e2f28a8);z-index:1}#iw-exp .hero2-title{font-size:36px}#iw-exp .patgrid{padding:76px 0 84px}#iw-exp .patgrid-head{display:block;margin-bottom:32px}#iw-exp .patgrid-head h2{font-size:42px;margin:16px 0}#iw-exp .patgrid-head p{font-size:14px}#iw-exp .patgrid-row{margin-right:-14px}#iw-exp .patgrid-row>div{flex-basis:78vw}#iw-exp .pat-card{height:220px}#iw-exp .pat-label{font-size:14px;padding:18px}#iw-exp .process{padding:72px 0}#iw-exp .process-row{grid-template-columns:1fr}#iw-exp .process-step{min-height:0;border-right:0;padding:28px 20px}#iw-exp .pgallery-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* focused campaign + pattern redesign */
+#iw-exp .promo{background:#f1eee5;padding:18px 0;border-bottom:1px solid #e0dccf}
+#iw-exp .promo:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,#fff8 0 32%,transparent 32% 100%),repeating-linear-gradient(90deg,transparent 0 79px,#183e3408 80px);pointer-events:none}
+#iw-exp .promo-inner{min-height:118px;justify-content:space-between;gap:28px;padding:20px clamp(22px,3.4vw,48px);text-align:left;background:#153f35;border-radius:18px;box-shadow:0 18px 45px #153f3518;overflow:hidden}
+#iw-exp .promo-inner:before{content:"";position:absolute;width:280px;height:280px;border:1px solid #b5efb433;border-radius:50%;right:21%;top:-188px;box-shadow:0 0 0 34px #b5efb40b,0 0 0 68px #b5efb408}
+#iw-exp .promo-kicker{display:flex;align-items:center;gap:10px;color:#b8ecb8;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+#iw-exp .promo-kicker:before{content:"";width:22px;height:1px;background:#70d778}
+#iw-exp .promo-copy{position:relative;z-index:2}
+#iw-exp .promo-line{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+#iw-exp .promo-script{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(25px,2.5vw,37px);line-height:1;color:#fff}
+#iw-exp .promo-strong{font-size:clamp(25px,2.5vw,37px);line-height:1;color:#fff;text-transform:none;letter-spacing:-.045em}
+#iw-exp .promo-deal{position:relative;z-index:2;display:flex;align-items:center;gap:17px;padding:0 26px;border-left:1px solid #ffffff24;border-right:1px solid #ffffff24;color:#fff}
+#iw-exp .promo-deal strong{font-size:clamp(34px,4vw,54px);line-height:.9;letter-spacing:-.07em;color:#9cf09f}
+#iw-exp .promo-deal span{font-size:11px;font-weight:800;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:#d5e4df}
+#iw-exp .promo-action{position:relative;z-index:2;display:flex;align-items:center;gap:14px}
+#iw-exp .promo-note{font-size:11px;line-height:1.45;color:#c6d8d2;max-width:120px}
+#iw-exp .promo-cta{width:48px;height:48px;padding:0;border-radius:50%;display:grid;place-items:center;background:#c5ffbf;color:#123b31;font-size:19px}
+#iw-exp .promo-cta:hover{background:#fff;transform:translateX(3px)}
+#iw-exp .promo-grain{display:none}
+#iw-exp .patgrid{padding:118px 0 126px;background:#f8f7f2;color:var(--ink)}
+#iw-exp .patgrid:before{background:radial-gradient(circle at 92% 3%,#bfe7c52e,transparent 25%);pointer-events:none}
+#iw-exp .patgrid-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.55fr);gap:70px;margin-bottom:46px;padding-bottom:36px;border-bottom:1px solid #dcded7;align-items:end}
+#iw-exp .patgrid-head .eyebrow{grid-column:1/-1;color:#356456}
+#iw-exp .patgrid-head h2{font-family:'Plus Jakarta Sans',Arial,sans-serif;font-size:clamp(38px,4.5vw,62px);line-height:.98;font-weight:800;letter-spacing:-.055em;color:#111511;max-width:720px}
+#iw-exp .patgrid-head h2 em{font-family:'Fraunces',serif;font-weight:500;color:#2b6655}
+#iw-exp .patgrid-head p{font-size:15px;line-height:1.75;color:#5c635d;max-width:430px}
+#iw-exp .patgrid-row{display:grid;grid-template-columns:1.18fr .82fr .82fr;grid-template-rows:280px 280px;gap:14px;border:0;border-radius:0;overflow:visible;background:transparent;box-shadow:none;counter-reset:pattern}
+#iw-exp .patgrid-row>div{min-width:0;border:0;border-radius:14px;overflow:hidden;background:#dfe3dc;counter-increment:pattern;position:relative}
+#iw-exp .patgrid-row>div:first-child{grid-row:1/3}
+#iw-exp .patgrid-row>div:nth-child(4){grid-column:2/3}
+#iw-exp .patgrid-row>div:nth-child(5){grid-column:3/4}
+#iw-exp .pat-card{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border-radius:0;background:#dfe3dc}
+#iw-exp .pat-card:after{background:linear-gradient(0deg,#06100ded 0%,#07110db8 24%,#07110d42 54%,transparent 76%)}
+#iw-exp .pat-card img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;filter:saturate(.8) contrast(1.02);transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .4s}
+#iw-exp .patgrid-row>div:hover .pat-card img{transform:scale(1.045);filter:saturate(1) contrast(1.02)}
+#iw-exp .pat-label{bottom:0;padding:24px;color:#fff;align-items:flex-end;text-shadow:0 2px 14px #000,0 1px 2px #000b}
+#iw-exp .pat-label>span{padding:10px 13px;border:1px solid #ffffff25;border-radius:10px;background:#08140fc2;backdrop-filter:blur(8px);box-shadow:0 8px 22px #0003}
+#iw-exp .pat-name{display:block;font-size:18px;font-weight:800;letter-spacing:-.02em;color:#fff}
+#iw-exp .pat-desc{display:block;margin-top:5px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#dff3e2}
+#iw-exp .pat-label:after{content:"0" counter(pattern) "  ↗";border:1px solid #ffffff38;border-radius:99px;padding:7px 9px;background:#08140fd6;color:#d1ffd2;font-size:10px;text-shadow:0 1px 4px #000}
+#iw-exp .patgrid-row>div:first-child .pat-name{font-size:26px}
+@media(max-width:900px){#iw-exp .promo-inner{gap:18px}#iw-exp .promo-note{display:none}#iw-exp .patgrid-row{grid-template-columns:1fr 1fr;grid-template-rows:390px 240px 240px}#iw-exp .patgrid-row>div:first-child{grid-row:auto;grid-column:1/-1}#iw-exp .patgrid-row>div:nth-child(4),#iw-exp .patgrid-row>div:nth-child(5){grid-column:auto}}
+@media(max-width:640px){#iw-exp .promo{padding:10px 0}#iw-exp .promo-inner{min-height:0;border-radius:14px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:17px}#iw-exp .promo-copy{grid-column:1/-1}#iw-exp .promo-deal{border:0;padding:0;gap:10px}#iw-exp .promo-deal strong{font-size:38px}#iw-exp .promo-action{justify-self:end}#iw-exp .promo-note{display:none}#iw-exp .patgrid{padding:70px 0 76px}#iw-exp .patgrid-head{display:block;margin-bottom:24px;padding-bottom:24px}#iw-exp .patgrid-head h2{font-size:36px;margin:14px 0 16px}#iw-exp .patgrid-head p{line-height:1.65}#iw-exp .patgrid-row{display:flex;gap:12px;margin-left:0;margin-right:calc((100vw - 100%)/-2);padding-right:20px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-left:0;border-radius:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}#iw-exp .patgrid-row::-webkit-scrollbar{display:none}#iw-exp .patgrid-row>div,#iw-exp .patgrid-row>div:first-child,#iw-exp .patgrid-row>div:nth-child(4),#iw-exp .patgrid-row>div:nth-child(5){flex:0 0 min(82vw,350px);height:430px;grid-column:auto;grid-row:auto;border-radius:14px;scroll-snap-align:start}#iw-exp .pat-card{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}#iw-exp .pat-label{padding:22px 18px}#iw-exp .pat-name,#iw-exp .patgrid-row>div:first-child .pat-name{font-size:20px}#iw-exp .pat-desc{display:block;font-size:9px}#iw-exp .pat-label:after{font-size:9px;padding:6px 8px}}
+/* Site-wide NOC logo refresh */
+#iw-exp .logo-mark{content:url('https://interwood.ae/wp-content/uploads/2026/09/interwood-logo-noc.png')!important;height:96px!important;width:300px!important;object-fit:contain!important}
+#iw-exp .footer-logo{display:inline-flex!important;width:fit-content!important;align-items:center!important;background:#fff!important;border-radius:12px!important;padding:6px 10px!important;margin:0 0 22px!important}
+#iw-exp .footer-logo img{content:url('https://interwood.ae/wp-content/uploads/2026/09/interwood-logo-noc.png')!important;height:92px!important;width:230px!important;object-fit:contain!important;object-position:center!important;filter:none!important}
+@media(max-width:640px){#iw-exp .logo-mark{height:72px!important;width:220px!important}#iw-exp .footer-logo img{height:82px!important;width:205px!important}}
+
+/* wordpress widget fixes */
+#iw-exp .svcband, #iw-exp .commercial, #iw-exp .green, #iw-exp [style*="background"] { }
+#iw-exp .svcband .eyebrow, #iw-exp .svcband h2, #iw-exp .svcband p, #iw-exp .commercial .eyebrow, #iw-exp .commercial h2, #iw-exp .commercial p { color:#fff; }
+
+/* Targeted heading color fix — no global layout/color changes. */
+#iw-exp .commercial-head h2,
+#iw-exp .process-head h2,
+#iw-exp .poster-copy h2,
+#iw-exp .callband-copy h2,
+#iw-exp .final h2 {
+  color:#fff;
+}
+
+</style>
+  
+<style id="final-fixes">
+/* wordpress widget fixes */
+#iw-exp .process, 
+#iw-exp .process h2,
+#iw-exp .process h3,
+#iw-exp .process p { color: #fff !important; }
+
+#iw-exp .canvas-head h2,
+#iw-exp .rail-head h2 { color:#101010 !important; }
+
+#iw-exp .canvas-grid { min-height:400px; }
+
+#iw-exp .prod img,
+#iw-exp .plank img { display:block !important; opacity:1 !important; }
+
+.whatsapp-float,
+#whatsapp-float,
+.whatsapp-button { display:none !important; }
+</style>
+
+
+
+
+
+
+
+<style id="wp-widget-final-fix">
+/* WordPress widget protection - safe */
+#iw-exp {
+  position: relative !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* hide original site chrome only */
+#iw-exp .topbar,
+#iw-exp .site-nav,
+#iw-exp nav,
+#iw-exp header,
+#iw-exp footer {
+  display:none !important;
+}
+
+/* remove floating widgets */
+.whatsapp-float,
+.whatsapp-button,
+[class*="whatsapp"],
+[class*="WhatsApp"],
+.chat-widget {
+ display:none !important;
+}
+
+/* prevent WP image/button overrides */
+#iw-exp img {
+ height:auto;
+ max-width:none;
+}
+
+#iw-exp h1,#iw-exp h2,#iw-exp h3,#iw-exp p {
+ margin-block-start: initial;
+ margin-block-end: initial;
+}
+</style>
+
+<style id="hard-header-removal">
+/* HARD REMOVE ALL EMBEDDED HEADER ELEMENTS */
+#iw-exp > .topbar,
+#iw-exp > .site-header,
+#iw-exp > .header,
+#iw-exp > nav,
+#iw-exp .topbar,
+#iw-exp .site-nav,
+#iw-exp .main-nav,
+#iw-exp .navigation,
+#iw-exp .navbar,
+#iw-exp .menu-wrapper,
+#iw-exp [class*="header"],
+#iw-exp [class*="Header"] {
+    display:none !important;
+    visibility:hidden !important;
+    height:0 !important;
+    min-height:0 !important;
+    overflow:hidden !important;
+}
+
+/* Remove floating elements */
+#iw-exp [class*="whatsapp"],
+#iw-exp [class*="WhatsApp"],
+#iw-exp [class*="floating"],
+.whatsapp-float,
+.whatsapp-button {
+    display:none !important;
+}
+
+/* Keep content visible */
+#iw-exp {
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+}
+</style>
+</head>
+<body style="margin:0">
+<div id="iw-exp">
+  <div class="topbar"><div class="shell"><span>Interwood — premium flooring across the UAE</span><span>Call +971 52 649 0022 · info@interwood.ae</span></div></div>
+
+
+
+  <!-- PROMO BANNER -->
+  <section class="promo">
+    <div class="shell promo-inner">
+      <div class="promo-copy">
+        <span class="promo-kicker">Exclusive flooring offers</span>
+        <span class="promo-line"><span class="promo-strong">Flooring Sale</span></span>
+      </div>
+      <div class="promo-deal"><strong>30%</strong><span>off selected<br>collections</span></div>
+      <div class="promo-action"><span class="promo-note">Limited pieces.<br>Complimentary advice.</span><a class="promo-cta" href="#products" aria-label="Explore sale collections">→</a></div>
+    </div>
+  </section>
+
+  <!-- SECONDARY HERO — premium bg slider across our own pattern range -->
+  <section class="hero2">
+    <div class="hero2-media">
+      <img class="hero2-slide" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=88" alt="Refined contemporary living room with premium flooring">
+    </div>
+    <div class="shell hero2-inner" data-reveal>
+      <div class="eyebrow">Supply &amp; installation, done properly</div>
+      <h2 class="hero2-title">Floors that <em>shape the room.</em></h2>
+      <p class="hero2-sub">Herringbone, chevron, SPC and more — one team for sourcing, delivery, subfloor prep and installation, fitted right the first time.</p>
+    </div>
+  </section>
+
+  <!-- 01 OPENING — hover collection picker -->
+  <section class="opening">
+    <div class="shell opening-grid">
+      <div class="op-left">
+        <div class="op-stat"><b>15 years</b>&nbsp;of flooring expertise across Dubai</div>
+        <h1 class="op-title">BUILT<br>TO BE<br><em>WALKED</em><br>ON.</h1>
+        <p class="op-sub">Every plank we supply and install is chosen to outlast the trend that sold it — and to feel like home the day it's laid.</p>
+      </div>
+      <div class="op-center" id="opCenter">
+        <img class="op-layer l1" data-depth="14" id="opLayer1a" src="https://cdn1.creativiso.net/ibflooringservices_co_uk/carousel-images/m/20260405105808_IMG_9731.JPEG" alt="Installed light oak engineered wood flooring">
+        <img class="op-layer l1b" data-depth="14" id="opLayer1b" style="opacity:0" src="https://cdn1.creativiso.net/ibflooringservices_co_uk/carousel-images/m/20260405105808_IMG_9731.JPEG" alt="">
+        <span class="op-chip" id="opChip">Engineered Wood</span>
+      </div>
+      <div class="op-right">
+        <div class="op-pick is-active" data-full="https://cdn1.creativiso.net/ibflooringservices_co_uk/carousel-images/m/20260405105808_IMG_9731.JPEG" data-label="Engineered Wood"><i>01</i><b>Engineered Wood</b></div>
+        <div class="op-pick" data-full="https://logomatcentral.com/cdn/shop/files/LVT-Concrete-03_1000x.jpg?v=1749828287" data-label="Luxury Vinyl"><i>02</i><b>Luxury Vinyl</b></div>
+        <div class="op-pick" data-full="https://www.parketta-zona.hu/images/uploads/nodepic/12/117/11655/vinyl-rigid-vinyl-spc-vagy-alpha-vinyl-padlo.jpg?t=432000404" data-label="SPC Flooring"><i>03</i><b>SPC Flooring</b></div>
+        <div class="op-pick" data-full="https://images.squarespace-cdn.com/content/v1/59c97f2d2278e70c1e03b26f/1510697432679-RPANJ8H69IT191HUC2Y4/TW_OfficeShoot%2B%281%2Bof%2B1%29-5.jpg" data-label="Laminate"><i>04</i><b>Laminate</b></div>
+        <div class="op-pick" data-full="https://sylpol.com.pl/wp-content/uploads/2025/07/plytk2.webp" data-label="Carpet Tiles"><i>05</i><b>Carpet Tiles</b></div>
+      </div>
+    </div>
+    <div class="op-foot">Explore the collections <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"></path></svg></div>
+  </section>
+
+  <div class="shell"><div class="seam" data-reveal></div></div>
+
+  <!-- SHOP BY CATEGORY -->
+  <section class="catgrid" id="collections">
+    <div class="shell catgrid-head" data-reveal>
+      <div class="eyebrow">Shop by category</div>
+      <p>Five flooring worlds, each built for a different kind of room and budget.</p>
+    </div>
+    <div class="shell catgrid-row">
+      <a class="cat-card" data-reveal href="https://floordubai.com/parquet-flooring/">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/parquet-room.png" alt="Parquet flooring in a clean empty architectural space">
+        <div class="cat-card-info"><span>01</span><b>Parquet Flooring<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></b></div>
+      </a>
+      <a class="cat-card" data-reveal href="https://floordubai.com/laminate-flooring/">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/laminate-townhouse.png" alt="Laminate flooring in a clean empty townhouse">
+        <div class="cat-card-info"><span>02</span><b>Laminate Flooring<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></b></div>
+      </a>
+      <a class="cat-card" data-reveal href="https://floordubai.com/spc-flooring-dubai/">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/spc-office.png" alt="SPC flooring in a clean empty office">
+        <div class="cat-card-info"><span>03</span><b>SPC Flooring<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></b></div>
+      </a>
+      <a class="cat-card" data-reveal href="https://floordubai.com/vinyl-flooring-dubai/">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/luxury-vinyl-apartment.png" alt="Luxury vinyl flooring in a clean empty apartment">
+        <div class="cat-card-info"><span>04</span><b>Vinyl Flooring<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></b></div>
+      </a>
+      <a class="cat-card" data-reveal href="https://floordubai.com/wooden-flooring/">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/engineered-wood-villa.png" alt="Wooden flooring in a clean empty villa">
+        <div class="cat-card-info"><span>05</span><b>Wooden Flooring<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></b></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 03 FEATURED PRODUCTS — clean uniform grid, top sellers -->
+  <section class="canvas" id="products">
+    <div class="shell">
+      <div class="canvas-head" data-reveal>
+        <div>
+          <div class="eyebrow">Featured products</div>
+          <h2 style="margin-top:14px">Our top-selling floors — picked for how they perform, not just how they photograph.</h2>
+        </div>
+        <a href="#contact">Request samples →</a>
+      </div>
+      <div class="canvas-grid is-uniform">
+        <a class="prod prod-side" data-reveal href="#contact"><span class="prod-badge">BESTSELLER</span>
+          <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=800&q=85" alt="Honey Herringbone">
+          <div class="prod-info"><div><h3>Honey Herringbone</h3><span>★★★★★ (42)</span></div><span class="prod-price">AED 189 / m²</span></div>
+        </a>
+        <a class="prod prod-side" data-reveal href="#contact"><span class="prod-badge">BESTSELLER</span>
+          <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=800&q=80" alt="Nordic Natural Oak">
+          <div class="prod-info"><div><h3>Nordic Natural Oak</h3><span>★★★★★ (24)</span></div><span class="prod-price">AED 145 / m²</span></div>
+        </a>
+        <a class="prod prod-side" data-reveal href="#contact">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Smoked Walnut">
+          <div class="prod-info"><div><h3>Smoked Walnut</h3><span>★★★★★ (31)</span></div><span class="prod-price">AED 175 / m²</span></div>
+        </a>
+        <a class="prod prod-side" data-reveal href="#contact">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80" alt="Charcoal Oak">
+          <div class="prod-info"><div><h3>Charcoal Oak</h3><span>★★★★★ (18)</span></div><span class="prod-price">AED 159 / m²</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP BY PATTERN -->
+  <section class="patgrid">
+    <div class="shell patgrid-head" data-reveal>
+      <div class="eyebrow">Shop by pattern</div>
+      <h2>Choose the rhythm of <em>your room.</em></h2>
+      <p>From directional chevrons to composed parquet, every laying pattern changes the rhythm, scale and character of a room.</p>
+    </div>
+    <div class="shell patgrid-row">
+      <div>
+        <a class="pat-card" data-reveal href="https://floordubai.com/#"><img src="https://interwood.ae/wp-content/uploads/2026/09/herringbone-room.png" alt="Herringbone flooring in a clean empty room"></a>
+        <span class="pat-label"><span><span class="pat-name">Herringbone</span><span class="pat-desc">Classic · dimensional · warm</span></span></span>
+      </div>
+      <div>
+        <a class="pat-card" data-reveal href="https://floordubai.com/parquet-flooring/"><img src="https://interwood.ae/wp-content/uploads/2026/09/parquet-room.png" alt="Parquet flooring in a clean empty room"></a>
+        <span class="pat-label"><span><span class="pat-name">Parquet</span><span class="pat-desc">Quiet · composed</span></span></span>
+      </div>
+      <div>
+        <a class="pat-card" data-reveal href="https://floordubai.com/#"><img src="https://interwood.ae/wp-content/uploads/2026/09/versailles-room.png" alt="Versailles parquet flooring in a clean empty room"></a>
+        <span class="pat-label"><span><span class="pat-name">Versailles</span><span class="pat-desc">Grand · architectural</span></span></span>
+      </div>
+      <div>
+        <a class="pat-card" data-reveal href="https://floordubai.com/product-category/chevron-flooring/"><img src="https://interwood.ae/wp-content/uploads/2026/09/chevron-room.png" alt="Chevron flooring in a clean empty room"></a>
+        <span class="pat-label"><span><span class="pat-name">Chevron</span><span class="pat-desc">Sharp · directional</span></span></span>
+      </div>
+      <div>
+        <a class="pat-card" data-reveal href="https://floordubai.com/#"><img src="https://interwood.ae/wp-content/uploads/2026/09/mosaic-room.png" alt="Wood mosaic flooring in a clean empty room"></a>
+        <span class="pat-label"><span><span class="pat-name">Mosaic</span><span class="pat-desc">Graphic · expressive</span></span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 PROCESS — how a project runs, start to finish -->
+  <section class="process" id="about">
+    <div class="shell">
+      <div class="process-head" data-reveal>
+        <div class="eyebrow">How it works</div>
+        <h2>From first call to finished floor, in four steps.</h2>
+      </div>
+      <div class="process-row">
+        <div class="process-step" data-reveal>
+          <div class="process-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>Consult</h3>
+          <p>Tell us the room, the budget and the look you're after — we shortlist the floors that actually fit.</p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v6H3zM7 9v3M11 9v5M15 9v3M19 9v5"/></svg></div>
+          <h3>Measure</h3>
+          <p>Our expert visits with full-size samples, checks the subfloor and confirms exact quantities.</p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14.7 6.3 3 3L19 8l-3-3zM3 21l4.5-1.5L18.5 8.5l-3-3L4.5 16.5z"/></svg></div>
+          <h3>Install</h3>
+          <p>Our own crews handle delivery, prep and fitting — no subcontractors passing the job around.</p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.9 8 11 4.6-2.1 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Aftercare</h3>
+          <p>Care guidance and warranty support so the floor keeps performing years after installation day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 RAIL — drag-based product discovery -->
+  <section class="rail-wrap">
+    <div class="shell rail-head" data-reveal>
+      <h2>More to explore</h2>
+      <span class="rail-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3"></path></svg>Drag to explore</span>
+    </div>
+    <div class="shell">
+      <div class="rail-track" id="railTrack">
+        <a class="plank" href="#contact"><img src="https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=800&q=80" alt="Coastal Pine"><div class="plank-info"><h3>Coastal Pine</h3><b>AED 99 / m²</b></div></a>
+        <a class="plank" href="#contact"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80" alt="Charcoal Oak"><div class="plank-info"><h3>Charcoal Oak</h3><b>AED 159 / m²</b></div></a>
+        <a class="plank" href="#contact"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Desert Dune Oak"><div class="plank-info"><h3>Desert Dune Oak</h3><b>AED 135 / m²</b></div></a>
+        <a class="plank" href="#contact"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Ivory Chevron"><div class="plank-info"><h3>Ivory Chevron</h3><b>AED 165 / m²</b></div></a>
+        <a class="plank" href="#contact"><img src="https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=800&q=80" alt="Pearl Ash Plank"><div class="plank-info"><h3>Pearl Ash Plank</h3><b>AED 119 / m²</b></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMERCIAL FLOORING RANGES -->
+  <section class="commercial">
+    <div class="shell commercial-head" data-reveal>
+      <div>
+        <div class="eyebrow">Built for heavy footfall</div>
+        <h2>Commercial flooring ranges for every kind of business.</h2>
+      </div>
+      <p>Specified, supplied and installed for spaces that don't get to close for repairs.</p>
+    </div>
+    <div class="shell commercial-grid">
+      <a class="comm-card" data-reveal href="#contact">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/office.png" alt="Modern corporate office with commercial carpet-tile flooring">
+        <span class="comm-num">01</span>
+        <div class="comm-body"><h3>Office Flooring</h3><p>Low-maintenance builds that hold up to daily foot traffic and rolling chairs.</p></div>
+      </a>
+      <a class="comm-card" data-reveal href="#contact">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/hotel.png" alt="Luxury hotel lobby with durable hospitality flooring">
+        <span class="comm-num">02</span>
+        <div class="comm-body"><h3>Retail &amp; Hospitality</h3><p>Statement floors for showrooms, hotels and restaurants that need to impress.</p></div>
+      </a>
+      <a class="comm-card" data-reveal href="#contact">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/healthcare-wood-flooring.png" alt="Modern healthcare clinic with commercial-grade oak wooden plank flooring">
+        <span class="comm-num">03</span>
+        <div class="comm-body"><h3>Healthcare Facilities</h3><p>Hygienic, seamless SPC systems built for clinics and healthcare interiors.</p></div>
+      </a>
+      <a class="comm-card" data-reveal href="#contact">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/industrial-wood-flooring.png" alt="Industrial warehouse with heavy-duty dark oak wooden plank flooring">
+        <span class="comm-num">04</span>
+        <div class="comm-body"><h3>Industrial &amp; Warehouse</h3><p>Durable, load-rated flooring specified for facilities and storage floors.</p></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FLOORING SERVICES BY INTERWOOD -->
+  <section class="svcband">
+    <div class="shell svcband-head" data-reveal>
+      <div class="eyebrow">What we do</div>
+      <h2>Flooring Services By Interwood</h2>
+      <p>Check out the complete range of services, treatments, and solutions we provide across all settings. Leave us a message for plans!</p>
+    </div>
+    <div class="shell svcband-row">
+      <a class="svc-feat" data-reveal href="#contact">
+        <img src="https://images.pexels.com/photos/37341468/pexels-photo-37341468.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Close-up of residential herringbone wood flooring">
+        <div class="svc-tag"><b>Residential Flooring Dubai</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></i></div>
+      </a>
+      <a class="svc-feat" data-reveal href="#contact">
+        <img src="https://interwood.ae/wp-content/uploads/2026/09/commercial-wood-flooring.png" alt="Premium commercial office with natural oak wooden plank flooring">
+        <div class="svc-tag"><b>Commercial Flooring</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></i></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- OUR GENERAL FLOORING SERVICES -->
+  <section class="svcgrid">
+    <div class="shell svcgrid-head" data-reveal>
+      <div class="eyebrow">Every space, one supplier</div>
+      <h2>Our General Flooring Services</h2>
+      <p>Interwood is the one-stop destination for all scales and levels of flooring supply and installation. We widely deal in villa flooring, studio, small, medium, and large apartment flooring, office and commercial flooring and fit-out solutions, and turnkey flooring for townhouses and penthouses.</p>
+    </div>
+    <div class="shell svcgrid-row">
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/villa.png" alt="Luxury UAE villa great room with expansive oak flooring"><div class="svc-card-info"><b>Villa Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/apartment.png" alt="Modern city apartment living area with premium plank flooring"><div class="svc-card-info"><b>Apartment Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/office.png" alt="Corporate office with workstations and commercial carpet-tile flooring"><div class="svc-card-info"><b>Office Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/home.png" alt="Welcoming family home living room with natural flooring"><div class="svc-card-info"><b>Home Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/farmhouse.png" alt="Country farmhouse living and dining room with rustic oak plank flooring"><div class="svc-card-info"><b>Farmhouse Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/hotel.png" alt="Luxury hotel lobby with durable hospitality flooring"><div class="svc-card-info"><b>Hotel Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/showroom.png" alt="Flooring showroom with sample displays and an open display floor"><div class="svc-card-info"><b>Showroom Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/restaurant.png" alt="Elegant restaurant dining room with durable commercial flooring"><div class="svc-card-info"><b>Restaurant Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/bedroom.png" alt="Serene bedroom with premium flooring clearly visible around the bed"><div class="svc-card-info"><b>Bedroom Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/living-room.png" alt="Bright living room with a refined herringbone floor"><div class="svc-card-info"><b>Living Room Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/kitchen.png" alt="Modern fitted kitchen with waterproof plank flooring"><div class="svc-card-info"><b>Kitchen Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+      <a class="svc-card" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/penthouse.png" alt="Upscale penthouse living space with skyline windows and premium flooring"><div class="svc-card-info"><b>Penthouse Flooring</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></div></a>
+    </div>
+  </section>
+
+  <!-- 06 POSTER -->
+  <section class="poster" id="services">
+    <div class="shell">
+      <div class="poster-shell" data-reveal>
+        <div class="poster-copy">
+          <div class="eyebrow">Interwood comes to you</div>
+          <h2>Your room.<br>Your light.<br>The right floor.</h2>
+          <p>See every finish in your own light. Our flooring expert brings full-size samples, selected around your interior, use and budget.</p>
+          <div class="poster-points"><span><i>✓</i> Professional consultation</span><span><i>✓</i> Full-size samples</span><span><i>✓</i> Expert measuring</span></div>
+          <div class="poster-actions"><a class="btn btn--acid" href="#contact">Book an appointment →</a></div>
+        </div>
+        <div class="poster-media"><img src="https://interwood.ae/wp-content/uploads/2026/09/premium-oak-flooring-banner.png" alt="High-end natural oak flooring with a premium matte finish"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL BAND -->
+  <section class="callband">
+    <div class="callband-media"><img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1600&q=80" alt="Interwood flooring installed in a Dubai home"></div>
+    <div class="shell callband-inner">
+      <div class="callband-copy" data-reveal>
+        <div class="eyebrow">Prefer to talk it through?</div>
+        <h2>Speak to a flooring expert today — no obligation.</h2>
+      </div>
+      <div class="callband-actions" data-reveal>
+        <a class="call-num" href="tel:+971526490022">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg></i>
+          <span><b>+971 52 649 0022</b><small>Call now</small></span>
+        </a>
+        <a class="btn btn--acid" href="#contact">Request a callback →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 GOOGLE REVIEWS (demo data) -->
+  <section class="greviews">
+    <div class="shell">
+      <div class="gr-head" data-reveal>
+        <div class="gr-head-left">
+          <svg class="gr-glogo" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+          <div>
+            <div class="gr-rating-line"><b>4.9</b><span class="gr-stars">★★★★★</span></div>
+            <div class="gr-sub">Based on 214 <a href="#" target="_blank" rel="noopener">Google reviews</a></div>
+          </div>
+        </div>
+        <a class="btn gr-write" href="#" target="_blank" rel="noopener">Write a review</a>
+      </div>
+
+      <div class="gr-track-wrap" data-reveal>
+        <button class="gr-nav gr-prev" aria-label="Previous reviews"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <div class="gr-track" id="grTrack">
+
+          <div class="gr-card">
+            <div class="gr-card-top">
+              <div class="gr-avatar" style="background:#4285F4">S</div>
+              <div class="gr-who"><b>Sarah M.</b><span>Local Guide · 24 reviews</span></div>
+              <svg class="gr-gicon" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+            </div>
+            <div class="gr-stars small">★★★★★</div>
+            <div class="gr-time">2 weeks ago</div>
+            <p class="gr-text">The team helped us choose the perfect warm oak, then installed the entire villa with incredible attention to detail. It feels like a completely new home.</p>
+            <div class="gr-posted"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>Posted on Google</div>
+          </div>
+
+          <div class="gr-card">
+            <div class="gr-card-top">
+              <div class="gr-avatar" style="background:#EA4335">R</div>
+              <div class="gr-who"><b>Rashid A.</b><span>5 reviews</span></div>
+              <svg class="gr-gicon" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+            </div>
+            <div class="gr-stars small">★★★★★</div>
+            <div class="gr-time">1 month ago</div>
+            <p class="gr-text">Excellent SPC flooring for our office fit-out. On time, tidy work, and the finish looks far more premium than what we paid for.</p>
+            <div class="gr-posted"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>Posted on Google</div>
+          </div>
+
+          <div class="gr-card">
+            <div class="gr-card-top">
+              <div class="gr-avatar" style="background:#34A853">L</div>
+              <div class="gr-who"><b>Layla K.</b><span>Local Guide · 41 reviews</span></div>
+              <svg class="gr-gicon" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+            </div>
+            <div class="gr-stars small">★★★★★</div>
+            <div class="gr-time">3 weeks ago</div>
+            <p class="gr-text">Bohat professional team. Samples ghar par le kar aaye, sab kuch explain kiya, aur installation bhi clean tareeqe se hui. Highly recommend!</p>
+            <div class="gr-posted"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>Posted on Google</div>
+          </div>
+
+          <div class="gr-card">
+            <div class="gr-card-top">
+              <div class="gr-avatar" style="background:#FBBC05">O</div>
+              <div class="gr-who"><b>Omar F.</b><span>9 reviews</span></div>
+              <svg class="gr-gicon" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+            </div>
+            <div class="gr-stars small">★★★★★</div>
+            <div class="gr-time">1 week ago</div>
+            <p class="gr-text">Great value for engineered wood. The crew was punctual and cleaned up after every stage of the install. Would use them again.</p>
+            <div class="gr-posted"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>Posted on Google</div>
+          </div>
+
+          <div class="gr-card">
+            <div class="gr-card-top">
+              <div class="gr-avatar" style="background:#8E44AD">H</div>
+              <div class="gr-who"><b>Hana T.</b><span>Local Guide · 12 reviews</span></div>
+              <svg class="gr-gicon" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+            </div>
+            <div class="gr-stars small">★★★★☆</div>
+            <div class="gr-time">2 months ago</div>
+            <p class="gr-text">Beautiful herringbone floor for our living room. Small delay in delivery but the team communicated well and the result was worth it.</p>
+            <div class="gr-posted"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>Posted on Google</div>
+          </div>
+
+          <div class="gr-card">
+            <div class="gr-card-top">
+              <div class="gr-avatar" style="background:#EA4335">M</div>
+              <div class="gr-who"><b>Mohammed I.</b><span>3 reviews</span></div>
+              <svg class="gr-gicon" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+            </div>
+            <div class="gr-stars small">★★★★★</div>
+            <div class="gr-time">4 days ago</div>
+            <p class="gr-text">From consultation to final install, everything felt premium and well organised. Pricing was transparent with no hidden surprises.</p>
+            <div class="gr-posted"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.86 13.86 0 0 1 10.95 24c0-1.45.25-2.87.74-4.18v-5.7H4.34A21.93 21.93 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>Posted on Google</div>
+          </div>
+
+        </div>
+        <button class="gr-nav gr-next" aria-label="Next reviews"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT GALLERY -->
+  <section class="pgallery">
+    <div class="shell pgallery-head" data-reveal>
+      <h2>Some insights from our flooring projects</h2>
+      <a href="#contact">Start your project →</a>
+    </div>
+    <div class="shell pgallery-grid">
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/engineered-wood-villa.png" alt="Warm oak engineered wood flooring"><span class="pg-cap">Engineered Wood · Villa, Emirates Hills</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/luxury-vinyl-apartment.png" alt="Pale oak luxury vinyl plank flooring"><span class="pg-cap">Luxury Vinyl · Apartment, JVC</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/spc-office.png" alt="Grey oak SPC plank flooring"><span class="pg-cap">SPC Flooring · Office, Business Bay</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/laminate-townhouse.png" alt="Natural oak laminate flooring"><span class="pg-cap">Laminate · Townhouse, Arabian Ranches</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/carpet-tiles-office.png" alt="Graphite modular carpet tile flooring"><span class="pg-cap">Carpet Tiles · Office fit-out</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/engineered-wood-bedroom.png" alt="Deep warm oak engineered wood flooring"><span class="pg-cap">Engineered Wood · Master bedroom</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/honey-herringbone.png" alt="Honey oak herringbone flooring"><span class="pg-cap">Honey Herringbone · Living room, Al Barari</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/nordic-natural-oak.png" alt="Pale Nordic natural oak flooring"><span class="pg-cap">Nordic Natural Oak · Family home</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/smoked-walnut.png" alt="Rich smoked walnut flooring"><span class="pg-cap">Smoked Walnut · Dining room</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/coastal-pine.png" alt="Sun-washed coastal pine flooring"><span class="pg-cap">Coastal Pine · Beach apartment</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/charcoal-oak.png" alt="Dark charcoal oak flooring"><span class="pg-cap">Charcoal Oak · Home office</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/ivory-chevron.png" alt="Pale ivory oak chevron flooring"><span class="pg-cap">Ivory Chevron · Show villa</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/commercial-plank.png" alt="Durable neutral oak commercial plank flooring"><span class="pg-cap">Commercial Plank · Creative office</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/natural-oak-farmhouse.png" alt="Rustic wide-plank natural oak flooring"><span class="pg-cap">Natural Oak · Country farmhouse</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/commercial-oak-restaurant.png" alt="Dark warm commercial oak flooring"><span class="pg-cap">Commercial Oak · Restaurant dining room</span></a>
+      <a class="pg-item" data-reveal href="#contact"><img src="https://interwood.ae/wp-content/uploads/2026/09/hospitality-flooring-hotel.png" alt="Luxury geometric hospitality parquet flooring"><span class="pg-cap">Hospitality Flooring · Luxury hotel</span></a>
+    </div>
+  </section>
+
+  <!-- 09 FAQ -->
+  <section class="faq">
+    <div class="shell faq-grid">
+      <div data-reveal>
+        <div class="eyebrow">Need to know</div>
+        <h2>Frequently asked questions</h2>
+        <p>Still deciding? Our flooring consultants are always happy to help.</p>
+        <a class="btn" href="#contact" style="margin-top:20px;background:var(--ink)">Ask our team</a>
+      </div>
+      <div data-reveal>
+        <div class="faq-item is-open"><button class="faq-q">Which flooring is best for Dubai's climate?<span>+</span></button><div class="faq-a">SPC, high-quality engineered wood and selected laminates perform especially well when correctly specified and professionally installed.</div></div>
+        <div class="faq-item"><button class="faq-q">Do you offer free measurements and samples?<span>+</span></button><div class="faq-a">Yes. We offer a complimentary consultation, site measure and curated sample presentation across most Dubai locations.</div></div>
+        <div class="faq-item"><button class="faq-q">How long does installation take?<span>+</span></button><div class="faq-a">Most residential rooms take one to three days. Larger or bespoke projects receive a detailed timeline before work begins.</div></div>
+        <div class="faq-item"><button class="faq-q">Can flooring be installed over existing tiles?<span>+</span></button><div class="faq-a">Often, yes. We first assess flatness, moisture and thresholds to confirm the best preparation and installation system.</div></div>
+        <div class="faq-item"><button class="faq-q">Do your floors include a warranty?<span>+</span></button><div class="faq-a">Yes. Product and workmanship warranties vary by collection and are clearly included in your proposal.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 FINAL CTA -->
+  <section class="final" id="contact">
+    <div class="shell final-grid">
+      <div data-reveal>
+        <div class="eyebrow" style="color:#bff4bd">Let's create something beautiful</div>
+        <h2>Start your Interwood journey.</h2>
+        <p>Tell us a little about your space. Our team will get back to you within one working day.</p>
+        <div class="final-list"><span>☎ +971 52 649 0022</span><span>✉ info@interwood.ae</span><span>⌖ Jebel Ali Free Zone, UAE</span></div>
+      </div>
+      <form class="final-form" data-reveal action="mailto:info@interwood.ae?subject=Consultation%20Request%20-%20Interwood%20Website" method="post" enctype="text/plain">
+        <input name="Name" type="text" placeholder="Your name" required><input name="Phone" type="tel" placeholder="Phone number" required>
+        <input name="Email" type="email" placeholder="Email address" required>
+        <select name="Project type" aria-label="Project type" required><option value="">Project type</option><option>Home</option><option>Office</option><option>Hospitality / Retail</option></select>
+        <textarea name="Project details" placeholder="Tell us about your space"></textarea>
+        <button class="btn btn--acid" type="submit">Request my consultation →</button>
+      </form>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <div class="footer">
+      <div class="shell footer-cols">
+        <div>
+          <div class="footer-logo"><img src="data:image/webp;base64,UklGRhAvAABXRUJQVlA4WAoAAAAYAAAANwQANwQAQUxQSI8VAAABHMVt2zjW/mOnXr9nREyALN9W/hDADEYwCISulqJDq+alhdgp0ljLe26Gvy8/zrZHckXbFptA9SCgFhBQB2ioAeHIpzXs8HJWa60wZYY7PNqywp8VzVXMIjogILCsWuCq60UgM0X+/89CAH8CIyJowbZdt202zslDYdgrsL4BQQAi/cm4bdtA+29+qe3ngREBh5EkRVIoyz7me7DFsFF++A//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//8R//jWyoedSwD2bUcAhm0PCQofnqIUMmRIoZLRzVWOGERgqPGdpCGDNkQwBpjDBQI4SHDMmrhwzJIwSUxgYjNTIYrXHBQ4bUGcKQIeUDUdGjhoNX44GHDOmrSTUWzNcn1kBgeg0DzqFBwGOGthDGDNkQ8on9nVPM7yFD8urcYvz5+vnF9i5BTO8yxPIuRQy/qFg5YvdlPkoSs7sssbqHDOmryxObz9cvUTzuQsXhLlb87TFDWwhjhmwIhYuzXbz42kOG5NVViKfn61cijnY14mdXJG52VeLlRcUqEycv8zFmaAujBsJWxyzEmCHDykPbazMrqy4zs2oyO6seM7RqMUurCV7MkCBDs/YIe45F00DV7uk2re+U3NmkMfXJkH1HKnbuPBMCq2avnyNcebMDBaFqLXcOfVQnG0J9MrRLj/iJLy/XIDU54xNhHmzp+mToVx7ZmNIEWpt0oN5blnR9slmWR/SKIf2opRlotIdkR+9ls32qpeVGP2xk04GJeOFF72Wz3jGh4kQ/bmALNuhT8qGf1z6548N2bOhA3VMHReArEzpS82ZPE7pmQYfq3UoVu58Y0LFKJx1d9Af/eS9bzP06bAzqEGagCmc87TswDOrgFVDRFfE+vOI872XLuhWpQ/Kd97Kl3VOQZTvvZXEj2vOUhem81yELvBVkxXKuqWLTEbJxSoZzUQWbs94uoeM3VxXfGvKWldtcVnZyD7mL5jXXlZw6Qnb8xGkuLDdTxJ0gH4zmys4r/EaQNzZzaZFJV84dODCZazut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" alt="Interwood Flooring"></div>
+          <p>Beautiful, high-performance floors — selected, supplied and installed across the UAE.</p>
+          <form class="newsletter" action="mailto:info@interwood.ae?subject=Newsletter%20Subscription" method="post" enctype="text/plain"><input name="Subscriber email" type="email" placeholder="Your email" required><button type="submit">Join →</button></form>
+        </div>
+        <div><h3>Collections</h3><a href="#collections">Engineered Wood</a><a href="#collections">Laminate</a><a href="#collections">SPC &amp; Vinyl</a><a href="budget-friendly.html">Budget Friendly</a><a href="#collections">Carpet Tiles</a></div>
+        <div><h3>Company</h3><a href="about-us.html">About us</a><a href="index.html#services">Services</a><a href="index.html#products">Products</a><a href="careers.html">Careers</a><a href="contact-us.html">Contact</a></div>
+        <div><h3>Visit</h3><a href="#contact">Book consultation</a><a href="#contact">Request samples</a><a href="#">Instagram ↗</a></div>
+      </div>
+      <div class="wordmark">INTERWOOD</div>
+      <div class="shell copy">© 2026 Interwood Flooring. All rights reserved.<span>Privacy · Terms · Made for beautiful living</span></div>
+    </div>
+  </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function () {
+  function revealAll() {
+    document.querySelectorAll("#iw-exp [data-reveal]").forEach(function (el) {
+      el.classList.add("is-visible");
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealAll);
+  } else {
+    revealAll();
+  }
+})();
+</script>
+
+<script>
+(function () {
+  const featuredGrid = document.querySelector("#iw-exp .canvas-grid");
+  const exploreRail = document.querySelector("#iw-exp .rail-track");
+
+  if (!featuredGrid && !exploreRail) return;
+
+  const API_BASE = "https://interwood.ae/wp-json/wc/store/v1/products";
+
+  const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+  }[char]));
+
+  const productPrice = (product) => {
+    const prices = product && product.prices;
+    if (!prices || prices.price === undefined || prices.price === null) return "";
+
+    const minorUnit = Number.isFinite(Number(prices.currency_minor_unit))
+      ? Number(prices.currency_minor_unit) : 2;
+    const numericPrice = Number(prices.price) / Math.pow(10, minorUnit);
+    if (!Number.isFinite(numericPrice)) return "";
+
+    const prefix = prices.currency_prefix || "";
+    const suffix = prices.currency_suffix || "";
+
+    return `${escapeHtml(prefix)}${numericPrice.toLocaleString(undefined, {
+      minimumFractionDigits: minorUnit,
+      maximumFractionDigits: minorUnit
+    })}${escapeHtml(suffix)}`;
+  };
+
+  const productImage = (product) => {
+    const image = product && product.images && product.images[0];
+    return image && image.src ? image.src : "";
+  };
+
+  const validProducts = (products) =>
+    Array.isArray(products)
+      ? products.filter((product) => product && product.name && productImage(product))
+      : [];
+
+  const renderFeatured = (products) => {
+    if (!featuredGrid) return;
+    featuredGrid.innerHTML = "";
+
+    products.slice(0, 6).forEach((product) => {
+      const name = escapeHtml(product.name);
+      const image = escapeHtml(productImage(product));
+      const permalink = escapeHtml(product.permalink || "https://interwood.ae/shop/");
+      const price = productPrice(product);
+
+      featuredGrid.insertAdjacentHTML("beforeend", `
+        <a class="prod prod-side" data-reveal href="${permalink}">
+          <span class="prod-badge">FEATURED</span>
+          <img src="${image}" alt="${name}" loading="lazy">
+          <div class="prod-info">
+            <div><h3>${name}</h3></div>
+            ${price ? `<span class="prod-price">${price}</span>` : ""}
+          </div>
+        </a>
+      `);
+    });
+
+    if (window.InterwoodRevealInit) window.InterwoodRevealInit();
+  };
+
+  const renderExplore = (products) => {
+    if (!exploreRail) return;
+    exploreRail.innerHTML = "";
+
+    products.slice(0, 10).forEach((product) => {
+      const name = escapeHtml(product.name);
+      const image = escapeHtml(productImage(product));
+      const permalink = escapeHtml(product.permalink || "https://interwood.ae/shop/");
+      const price = productPrice(product);
+
+      exploreRail.insertAdjacentHTML("beforeend", `
+        <a class="plank" href="${permalink}">
+          <img src="${image}" alt="${name}" loading="lazy" draggable="false">
+          <div class="plank-info">
+            <h3>${name}</h3>
+            ${price ? `<b>${price}</b>` : ""}
+          </div>
+        </a>
+      `);
+    });
+  };
+
+  // Featured area: use products explicitly marked Featured in WooCommerce.
+  const featuredRequest = fetch(`${API_BASE}?per_page=6&featured=true`)
+    .then((response) => {
+      if (!response.ok) throw new Error(`Featured products request failed: ${response.status}`);
+      return response.json();
+    })
+    .then(validProducts);
+
+  // Drag-to-explore area: use the live WooCommerce catalog.
+  const catalogRequest = fetch(`${API_BASE}?per_page=20&orderby=date&order=desc`)
+    .then((response) => {
+      if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
+      return response.json();
+    })
+    .then(validProducts);
+
+  Promise.allSettled([featuredRequest, catalogRequest]).then(([featuredResult, catalogResult]) => {
+    const catalogProducts = catalogResult.status === "fulfilled" ? catalogResult.value : [];
+    const featuredProducts =
+      featuredResult.status === "fulfilled" && featuredResult.value.length
+        ? featuredResult.value
+        : catalogProducts;
+
+    renderFeatured(featuredProducts);
+    renderExplore(catalogProducts.length ? catalogProducts : featuredProducts);
+  }).catch((error) => {
+    console.warn("Interwood WooCommerce products error:", error);
+  });
+})();
+</script>
+
+</body>
+</html>
+
+<style id="visibility-final-fix">
+/* Final safety: keep all actual page sections visible in WordPress. */
+#iw-exp section,
+#iw-exp .footer,
+#iw-exp .footer-cols,
+#iw-exp .canvas-grid,
+#iw-exp .rail-track,
+#iw-exp [data-reveal].is-visible {
+  visibility: visible;
+}
+#iw-exp [data-reveal].is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+#iw-exp .footer {
+  display: block !important;
+}
+</style>
